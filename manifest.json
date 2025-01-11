@@ -91,7 +91,7 @@
 	"display_override": ["fullscreen", "minimal-ui"],
 	"display": "fullscreen",
 	"orientation":"portrait",
-	"start_url": "app.html"
+	"start_url": "index.html"
 }
 
 

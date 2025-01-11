@@ -14,7 +14,6 @@
 	--cd-color-light-grey: #98A5A8;
 	--cd-color-fog: #E5EAEB;
 	--cd-color-snow: #F8F9FA;
-
 	--cd-font-size-3xl: 120px;
 	--cd-font-size-2xl: 72px;
 	--cd-font-size-xl: 68px;
@@ -31,10 +30,34 @@
 	--cd-font-line-height-md: 170%;
 	--cd-font-line-height-sm: 160%;
 	--cd-font-line-height-xs: 120%;
-
 	--cd-font-letter-spacing-body: 0px;
 	--cd-font-letter-spacing-heading: -2px;
 	--cd-font-family-saira: 'Saira Semi Condensed';
 	--cd-font-family-roboto: 'Roboto';
 	--cd-gradient-gold: linear-gradient(180deg, var(--cd-color-sunshine) 0%, var(--cd-color-sunflower) 100%);
+
+
+
+	@media screen and (min-width: 1000px) {
+		--cd-font-size-3xl: 120px;
+		--cd-font-size-2xl: 72px;
+		--cd-font-size-xl: 68px;
+		--cd-font-size-lg: 48px;
+		--cd-font-size-md: 40px;
+		--cd-font-size-sm: 32px;
+		--cd-font-size-xs: 28px;
+		--cd-font-size-li-heading: 54px;
+		--cd-font-size-li-text: 26px;
+	}
+	@media screen and (min-width: 2000px) {
+		--cd-font-size-3xl: 120px;
+		--cd-font-size-2xl: 72px;
+		--cd-font-size-xl: 68px;
+		--cd-font-size-lg: 48px;
+		--cd-font-size-md: 40px;
+		--cd-font-size-sm: 32px;
+		--cd-font-size-xs: 28px;
+		--cd-font-size-li-heading: 54px;
+		--cd-font-size-li-text: 26px;
+	}
 }

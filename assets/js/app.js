@@ -13,7 +13,7 @@ function removeLoader(){
   	});
   	//hide the image loader
   	$( "#image-loader" ).fadeOut(500, function() {
-      //$( "#image-loader" ).remove(); //leave for now
+      $( "#image-loader" ).remove(); //leave for now
   	});
 }
 if ("serviceWorker" in navigator) {
@@ -86,22 +86,7 @@ $( document ).ready(function() {
 
 
 
-// // If theres no activity for 30 seconds do something
-// var activityTimeout = setTimeout(inActive, 30000);
 
-// function resetActive(){
-//     $(document.body).attr('class', 'app active');
-//     clearTimeout(activityTimeout);
-//     activityTimeout = setTimeout(inActive, 30000);
-// }
-
-// // No activity do something.
-// function inActive(){
-//     $(document.body).attr('class', 'app inactive');
-// }
-
-// // Check for mousemove, could add other events here such as checking for key presses ect.
-// $(document).bind('mousemove', function(){resetActive()});
 
 
 	let vid = document.getElementById("video_bg");
@@ -113,6 +98,123 @@ $( document ).ready(function() {
 	function pauseVid() {
 	    vid.pause();
 	}
+
+
+
+	// If theres no activity for 30 (30000) seconds do something 
+	// temporarily set to 5 min (300000)
+	var activityTimeout = setTimeout(inActive, 300000);
+
+	function backtoStart(){
+		clearTimeout(activityTimeout);
+	    activityTimeout = setTimeout(inActive, 300000);
+		window.setTimeout(function(){
+		 	$('.section').removeClass('animate__fadeIn').addClass('animate__fadeOut');
+		 	$('.dark-overlay').fadeOut();
+	 	},100);
+	 	window.setTimeout(function(){
+	 		$('#video-bg')[0].play(); 
+	 		$('#video-bg').removeClass('blur'); 
+	 		$('.section').addClass('d-none');
+	 		$('#start-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
+	 		$('#footer-menu').addClass('d-none');
+	 		$('#footer-exit').addClass('d-none');
+	 	},500);
+	}
+
+	function resetActive(){
+	    $(document.body).attr('class', 'app active');
+	    $(document).bind('keyup keypress tap taphold click', function(){
+			resetActive();
+		});
+	    clearTimeout(activityTimeout);
+	    activityTimeout = setTimeout(inActive, 300000);
+	    $('#video-bg')[0].play(); 
+	 	$('#video-bg').removeClass('blur');
+	 	//set UI opacity to 1
+	 	$('.app_footer').removeClass('op-0');
+	 	$('.img-overlay').removeClass('op-0');
+	 	$( '.section' ).each(function(index) {
+		   // check section has opacity class
+            if($(this).hasClass("op-0")){
+               $(this).removeClass('op-0');
+            } else{
+                //do nothing, its hidden
+            }
+		});
+		//hide the timer screen
+		$( '.timer-overlay' ).fadeOut();
+
+		
+	}
+
+	// No activity do something.
+	function inActive(){
+
+		$(document).unbind('keyup keypress tap taphold click', function(){
+			resetActive();
+		});
+	    $(document.body).attr('class', 'app inactive');
+	    $('#video-bg')[0].pause(); 
+	 	$('#video-bg').addClass('blur');
+	 	//set UI opacity to 0
+	 	$('.app_footer').addClass('op-0');
+	 	$('.img-overlay').addClass('op-0');
+	 	$( '.section' ).each(function(index) {
+		   // check section is visible
+            if($(this).is(":visible")){
+               $(this).addClass('op-0');
+            } else{
+                //do nothing, its hidden
+            }
+		});
+		//show the timer screem
+		$( '.timer-overlay' ).fadeIn();
+
+		//Start the clock
+		var sec = 60;
+		var timer = setInterval(function() {
+		    $('#timer-counter').animate({
+		        // opacity: 0.25,
+		        // fontSize: '2em'
+		    }, 500, function() {
+		        // $('#hideMsg span').css('opacity', 1);
+		        // $('#hideMsg span').css('font-size', '1em');
+		        $('#timer-counter').text(sec--);
+		    })
+
+		    if (sec == -1) {
+		        //reset to start screen
+		        clearInterval(timer);
+		        $('#timer-counter').text('60');
+		        resetActive();
+		        backtoStart();
+		    }
+
+		    
+
+			$("#exit-timer").click(function (e) {
+				e.preventDefault();
+				resetActive();
+				clearInterval(timer);
+				$('#timer-counter').text('60');
+			});
+
+		}, 1000);
+
+		
+
+
+	}
+
+	
+	// Check for mousemove, could add other events here such as checking for key presses ect.
+	$(document).bind('keyup keypress tap taphold click', function(){
+		resetActive();
+	});
+
+
+
 
 
 	$('.modal').on('hide.bs.modal', function (e) {

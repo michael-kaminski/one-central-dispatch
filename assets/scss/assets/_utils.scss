@@ -282,10 +282,13 @@ div#preload {
 	left: 0;
 }
 .op-0{
-	opacity: 0;
+	opacity: 0 !important;
 }
 .op-1{
-	opacity: 1;
+	opacity: 1 !important;
+}
+.z-120{
+	z-index: 120;
 }
 .z-100{
 	z-index: 100;

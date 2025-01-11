@@ -825,7 +825,7 @@
 		</section>
 		<!-- See What's Coming : END -->
 		<!-- Footer : START -->
-		<footer>
+		<footer class="app_footer">
 			<div class="footer_column exit_container app_control font-roboto color-white">
 				<div class="app_control_content d-none" id="footer-exit">
 					<div class="exit-svg-container">
@@ -855,12 +855,13 @@
 		</footer>
 		<!-- Footer : END -->
 		<!-- UI Elements : START -->
-		<div class="timer-overlay" style="display: none;">
+		<div class="timer-overlay z-100" style="display: none;">
 			<img class="_svg" src="assets/img/icon-clock.svg"/>
 			<span class="timer-title">Are you still there?</span>
-			<span class="timer-text">Your session will expire in <span id="timer-counter">00</span> seconds.</span>
+			<span class="timer-text">Your session will expire in <span id="timer-counter">60</span> seconds.</span>
+			<a href="#" id="exit-timer">EXIT NOW</a>
 		</div>
-		<div class="rotate-msg-overlay" style="display: none;">
+		<div class="rotate-msg-overlay z-120" style="display: none;">
 			<img class="_svg" src="assets/img/icon-rotate.svg"/>
 			<h1>Please rotate your device</h1>
 			<p>This demo is best viewed in portrait mode.</p>

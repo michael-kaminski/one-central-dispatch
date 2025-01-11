@@ -36,6 +36,32 @@
   --cd-font-family-roboto: "Roboto";
   --cd-gradient-gold: linear-gradient(180deg, var(--cd-color-sunshine) 0%, var(--cd-color-sunflower) 100%);
 }
+@media screen and (min-width: 1000px) {
+  :root {
+    --cd-font-size-3xl: 120px;
+    --cd-font-size-2xl: 72px;
+    --cd-font-size-xl: 68px;
+    --cd-font-size-lg: 48px;
+    --cd-font-size-md: 40px;
+    --cd-font-size-sm: 32px;
+    --cd-font-size-xs: 28px;
+    --cd-font-size-li-heading: 54px;
+    --cd-font-size-li-text: 26px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  :root {
+    --cd-font-size-3xl: 120px;
+    --cd-font-size-2xl: 72px;
+    --cd-font-size-xl: 68px;
+    --cd-font-size-lg: 48px;
+    --cd-font-size-md: 40px;
+    --cd-font-size-sm: 32px;
+    --cd-font-size-xs: 28px;
+    --cd-font-size-li-heading: 54px;
+    --cd-font-size-li-text: 26px;
+  }
+}
 
 /* roboto-100 - latin */
 @font-face {
@@ -1207,6 +1233,61 @@ footer .footer_column.app_control.menu_container #footer-menu:hover .footer-menu
   display: block;
 }
 
+.timer-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.timer-overlay ._svg {
+  width: 150px;
+  height: 150px;
+}
+.timer-overlay .timer-title {
+  color: var(--cd-color-tangerine);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--cd-font-family-saira);
+  font-size: 82px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%; /* 73.8px */
+  letter-spacing: -0.82px;
+  text-transform: uppercase;
+}
+.timer-overlay .timer-text {
+  color: #FFF;
+  text-align: center;
+  font-family: var(--cd-font-family-roboto);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 48px */
+}
+.timer-overlay .timer-text #timer-counter {
+  font-weight: 700;
+}
+.timer-overlay #exit-timer {
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--cd-font-family-roboto);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%; /* 21.6px */
+  letter-spacing: 0.24px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  text-decoration: underline;
+}
+
 .callout_card {
   display: flex;
   flex-direction: column;
@@ -1944,11 +2025,15 @@ div#preload {
 }
 
 .op-0 {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 .op-1 {
-  opacity: 1;
+  opacity: 1 !important;
+}
+
+.z-120 {
+  z-index: 120;
 }
 
 .z-100 {
