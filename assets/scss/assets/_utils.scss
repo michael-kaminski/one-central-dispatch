@@ -49,6 +49,10 @@ div#preload {
 }
 
 // FONTS
+.font-size-h1{
+	letter-spacing: var(--cd-font-letter-spacing-h1);
+	font-size: var(--cd-font-size-h1);
+}
 .font-roboto{
 	font-family: var(--cd-font-family-roboto);
 }
