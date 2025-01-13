@@ -32,15 +32,53 @@
 	<meta name="msapplication-wide310x150logo" content="assets/icons/mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="assets/icons/mstile-310x310.png" />
 	<link rel="manifest" href="manifest.json">
+	
+	<!-- 
+
+	This will be used for iPad Versions.
+
+	--------------------------------------------------------------
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png"> -->
+	<!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico"><![endif]-->
+	<!-- Add to home screen for Android and modern mobile browsers -->
+	<!-- 
+	<meta name="theme-color" content="#4DBA87"> -->
+	<!-- Add to home screen for Safari on iOS -->
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="central-dispatch-touchscreen-experience">
+	<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon-152x152.png"> -->
+	<!-- Add to home screen for Windows -->
+	<!-- <meta name="msapplication-TileImage" content="/assets/img/icons/msapplication-icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#000000"> -->
+	<!-- Open Graph Meta -->
+	<!-- <meta property="og:locale" content="en_US">
+	<meta property="og:title" content="title goes here">
+	<meta property="og:image" content="link_to_image">
+	<meta property="og:description" content="description goes here">
+	<meta property="og:sitename" content="Sitename"> -->
+	<!-- Twitter Card Meta -->
+	<!-- <meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="title goes here">
+	<meta name="twitter:description" content="description goes here">
+	<meta name="twitter:url" content="site url goes here">
+	<meta name="twitter:image" content="site image goes here"> 
+
+	--------------------------------------------------------------
+
+	-->
+
+
+
+	<!-- CSS : START -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link href="assets/css/animate.min.css" rel="stylesheet"/>
+	<link type="text/css" href="assets/css/main.css" rel="stylesheet"/>
 	<!-- CSS : END -->
-	<script>
-	    function pageRedirect() {
-	        window.location.replace("/index.html");
-	    }      
-	    setTimeout("pageRedirect()", 1000);
-	</script>
 </head>
-<body class="app" id="app" style="background-color: #00333F;">
+<body class="app" id="app">
 	<noscript>
 	<!-- Fallback content in case JavaScript fails to load. -->
 		<h1 class="font-saira-semi-condensed color-tangerine">Central Dispatch Touchscreen Experience</h1>
@@ -48,11 +86,969 @@
 	</noscript>
 	<!-- App Container : START -->
 	<main class="app_container" id="app-container">
-		<h1 class="font-saira-semi-condensed color-tangerine">You are being redirected to Central Dispatch Touchscreen Experience...</h1>
+		<!-- Splash Screen : START -->
+		<section class="section animate__animated" id="start-screen">
+			<div class="screen_container min-100 w-100 p-0">
+				<lottie-player src="assets/img/Stats.json" background="transparent" speed="1" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></lottie-player>
+				<div class="start_screen_content">
+					<div class="start_screen_title">
+						<span class="orange_bg ">One</span> 
+						<span>Central</span> 
+						<span>Platform</span>
+					</div>
+					<button type="button" class="start-btn" id="start-app">Experience&nbsp;the&nbsp;New&nbsp;Central&nbsp;Dispatch</button>
+				</div>
+			</div>
+		</section>
+		<!-- Splash Screen : END -->
+		<!-- Menu Screen : START -->
+		<section class="section animate__animated d-none" id="menu-screen">
+			<div class="screen_container">
+				<nav>
+					<div class="btn_container">
+						<button type="button" id="manheim-listing-integration" class="img-btn">
+							<div id="btn-tag-1" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div>
+							Manheim Listing Integration
+						</button>
+					</div>
+					<div class="btn_container">
+						<button type="button" id="tailored-plans" class="img-btn">
+							<div id="btn-tag-2" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div>
+							Tailored Plans
+						</button>
+					</div>
+					<div class="btn_container">
+						<button type="button" id="market-intelligence" class="img-btn">
+							<div id="btn-tag-3" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div>
+							Market Intelligence
+						</button>
+					</div>
+					<div class="btn_container">
+						<button type="button" id="carrier-app" class="img-btn">
+							<div id="btn-tag-4" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div>
+							Carrier App
+						</button>
+					</div>
+					<div class="btn_container">
+						<button type="button" id="marketplace-apis" class="img-btn">
+							<div id="btn-tag-5" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div>
+							Marketplace APIs
+						</button>
+					</div>
+					<div class="btn_container">
+						<button type="button" id="marketplace-integrity" class="img-btn">
+							Marketplace Integrity
+						</button>
+					</div>
+					<div class="btn_container">
+						<button type="button" id="about-the-marketplace" class="img-btn">
+							About the Marketplace
+						</button>
+					</div>
+				</nav>
+				<div class="nav_extras">
+					<h3 class="font-saira-semi-condensed color-tangerine font-size-2xl pb-0 headline">We’re just getting started.</h3>
+					<a href="" class="link-arrow color-white font-roboto" id="see-whats-coming">
+						<span>See what&rsquo;s coming</span>
+						<img src="assets/img/nav-arrow.svg" class="nav-arrow" />
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- Menu Screen : END -->
+		<!-- Manheim Listing Integration : START -->
+		<section class="section animate__animated d-none" id="manheim-listing-integration-screen">
+			<div class="screen_container">
+				<button class="x-btn">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<div class="new-tag animate__animated animate__bounceIn animate__delay-2s">NEW</div>
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">Manheim Listing Integration</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 mb-0 animate__delay-1s animate__animated animate__fast animate__fadeIn ">
+						Seamlessly list your Manheim-purchased inventory onto the Central Dispatch marketplace without ever leaving your Manheim account.</p>
+				</div>
+				<div class="content_container no-bg">
+					<!-- BG TABLE (OUTER) : START -->
+					<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="content-table">
+						<tr><td class="cell top-left table-corner" width="10" height="10"></td><td class="cell top-center"></td><td class="cell top-right table-corner" width="10" height="10"></td></tr>
+						<tr>
+							<td class="cell middle-left" width="10" height="100%"></td>
+							<td class="cell middle-center padding-wrap" height="100%">
+								<!-- BG TABLE (INNER) : START -->
+
+								<div class="d-flex felx-column align-items-center justify-content-center">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#mannListingIntModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/mann-listing-int-1.png" class="max-900" />
+										</a>
+									</div>
+								</div>
+								<!-- BG TABLE (INNER) : END -->
+							</td>
+							<td class="cell middle-right" width="10" height="100%"></td>
+						</tr>
+						<tr><td class="cell bottom-left table-corner" width="10" height="10"></td><td class="cell bottom-center" height="10"></td><td class="cell bottom-right table-corner" width="10" height="10"></td></tr>
+					</table>
+					<!-- BG TABLE (OUTER) : END -->
+				</div>
+			</div>
+		</section>
+		<!-- Manheim Listing Integration : END -->
+		<!-- Tailored Plans : START -->
+		<section class="section animate__animated d-none" id="tailored-plans-screen">
+			<div class="screen_container">
+				<button class="x-btn">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<div class="new-tag animate__animated animate__bounceIn animate__delay-2s">NEW</div>
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">
+						Tailored Plans
+					</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 mb-0 animate__delay-1s animate__animated animate__fast animate__fadeIn ">
+						Our plans put you in complete control and help drive your business forward.
+					</p>
+					<!-- <img class="" src="assets/img/tailored-plans-text.svg"/> -->
+				</div>
+				<div class="content_container no-bg no-border">
+					<div class="plans animate__delay-2s animate__animated animate__zoomIn" id="plans">
+						<div class="core plan">
+							<h2 class="font-saira-semi-condensed ">Core</h2>
+							<span class="font-size-sm color-white">Starting at:</span>
+							<div class="font-saira-semi-condensed price font-size-sm color-white font-family-saira">$100/month + applicable tax</div>
+							
+							<ul>
+								<li>Access to THE largest auto logistics marketplace</li>
+								<li>Post and Manage Listings</li>
+								<li>Market Intelligence</li>
+								<li>Price Check</li>
+								<li>Send a direct dispatch to a preferred Carrier</li>
+								<li>Real-time dispatch tracking with CD carrier app</li>
+								<li>Digital document storage</li>
+								<li>Dispatch management and status notifications</li>
+								<li>Access to Inspections and eBOL from the CD carrier app</li>
+							</ul>
+						</div>
+						<div class="premium plan">
+							<h2 class="font-saira-semi-condensed">Premium</h2>
+							<span class="font-size-sm color-white">Starting at:</span>
+							<div class="font-saira-semi-condensed price font-size-sm color-white font-family-saira">$200/month + applicable tax</div>
+							<p class="font-saira-semi-condensed ul-title color-white">All the Core features:</p>
+							<ul>
+								<li>Access to THE largest auto logistics marketplace</li>
+								<li>Post and Manage Listings</li>
+								<li>Market Intelligence</li>
+								<li>Price Check</li>
+								<li>Send a direct dispatch to a preferred Carrier</li>
+								<li>Real-time dispatch tracking with CD carrier app</li>
+								<li>Digital document storage</li>
+								<li>Dispatch management and status notifications</li>
+								<li>Access to Inspections and eBOL from the CD carrier app</li>
+							</ul>
+							<a id="feature_toggle" class="feature_toggle collapsed" data-bs-toggle="collapse" href="#premium_additions" role="button" aria-expanded="false" aria-controls="premium_additions">
+								<div class="icon-el"></div>
+								<div class="plus-title">Plus these premium additions</div>
+							</a>
+							<div class="collapse" id="premium_additions">
+								<ul>
+									<li>Price Check Plus</li>
+									<li>Direct to Carrier offers</li>
+									<li>Automatic listing and documnet updates</li>
+									<li>Performance Management Support</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Tailored Plans : END -->
+		<!-- Market Intelligence : START -->
+		<section class="section animate__animated d-none" id="market-intelligence-screen">
+			<div class="screen_container">
+				<button class="x-btn ">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<div class="new-tag animate__animated animate__bounceIn animate__delay-2s">NEW</div>
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">
+						Market Intelligence
+					</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 mb-0 animate__delay-1s animate__animated animate__fast animate__fadeIn ">Central Dispatch Market Intelligence leverages industry leading AI to provide you with the latest transportation marketplace data and insights to help you maximize both transportation speed and profitability.</p>
+				</div>
+				
+				<!-- BG TABLE (OUTER) : START -->
+				<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="content-table">
+					<tr><td class="cell top-left table-corner" width="10" height="10"></td><td class="cell top-center"></td><td class="cell top-right table-corner" width="10" height="10"></td></tr>
+					<tr>
+						<td class="cell middle-left" width="10" height="100%"></td>
+						<td class="cell middle-center" height="100%">
+							<!-- BG TABLE (INNER) : START -->
+							<div class="content_container no-bg">
+								<div class="callout_row flex-row border-bottom">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#marketIntelligenceModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/marketplace-intel-report-thumb-compressed.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">Market Intelligence Report</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Monthly reporting on two key industry data points, Average Price Per Mile and Average Mileage on Listings offering you full transparency into current transportation trends.</p>
+									</div>
+								</div>
+								<div class="callout_row flex-row-reverse">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#priceCheckModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img class="" src="assets/img/pricecheck-thumbnail.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">Price Check &amp; Price Check Plus</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Make more informed and profitable decisions with clear and reliable real-time data powered by industry-leading AI, ensuring the price you receive reflects current market trends.</p>
+									</div>
+								</div>
+							</div>
+							<!-- BG TABLE (INNER) : END -->
+						</td>
+						<td class="cell middle-right" width="10" height="100%"></td>
+					</tr>
+					<tr><td class="cell bottom-left table-corner" width="10" height="10"></td><td class="cell bottom-center" height="10"></td><td class="cell bottom-right table-corner" width="10" height="10"></td></tr>
+				</table>
+				<!-- BG TABLE (OUTER) : END -->
+				
+			</div>
+		</section>
+		<!-- Market Intelligence : END -->
+		<!-- Carrier App : START -->
+		<section class="section animate__animated d-none" id="carrier-app-screen">
+			<div class="screen_container">
+				<button class="x-btn">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<div class="new-tag animate__animated animate__bounceIn animate__delay-2s">NEW</div>
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">Carrier App</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 animate__delay-1s animate__fadeIn animate__animated">Get enhanced visibility and security for your vehicles throughout the shipping process.</p>
+				</div>
+				<!-- BG TABLE (OUTER) : START -->
+				<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="content-table">
+					<tr><td class="cell top-left table-corner" width="10" height="10"></td><td class="cell top-center"></td><td class="cell top-right table-corner" width="10" height="10"></td></tr>
+					<tr>
+						<td class="cell middle-left" width="10" height="100%"></td>
+						<td class="cell middle-center" height="100%">
+							<!-- BG TABLE (INNER) : START -->
+							<div class="content_container no-bg">
+								<div class="callout_row flex-row border-bottom">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#realTimeTrkModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/carrier-app-1.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">Real-Time Tracking</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">View LIVE updates on the location and status of your deliveries.</p>
+									</div>
+								</div>
+								<div class="callout_row flex-row-reverse border-bottom">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#appInspectionModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/carrier-app-2.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">Vehicle Inspection</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Gain unmatched transparency into your vehicles condition.</p>
+									</div>
+								</div>
+								<div class="callout_row flex-row">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#ebolModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/carrier-app-3.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">EBOL Access</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Seamlessly access key documentation and EBOL.</p>
+									</div>
+								</div>
+							</div>
+							<!-- BG TABLE (INNER) : END -->
+						</td>
+						<td class="cell middle-right" width="10" height="100%"></td>
+					</tr>
+					<tr><td class="cell bottom-left table-corner" width="10" height="10"></td><td class="cell bottom-center" height="10"></td><td class="cell bottom-right table-corner" width="10" height="10"></td></tr>
+				</table>
+				<!-- BG TABLE (OUTER) : END -->
+			</div>
+		</section>
+		<!-- Carrier App : END -->
+		<!-- Marketplace APIs : START -->
+		<section class="section animate__animated d-none" id="marketplace-apis-screen">
+			<div class="screen_container">
+				<button class="x-btn">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<div class="new-tag animate__animated animate__bounceIn animate__delay-2s">NEW</div>
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">
+						Marketplace APIs
+					</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 mb-0 animate__delay-1s animate__animated animate__fast animate__fadeIn ">
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+				</div>
+				<div class="content_container p-0">
+					<div class="fancy_list">
+						<!-- LIST ITEM : START -->
+						<div class="fl_item">
+							<div class="fl_item_heading color-tangerine font-size-li-heading">Listing API</div>
+							<div class="fl_item_content">
+								<table class="li_bg_table" id="" width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="cell top-left" width="14" height="18"></td>
+										<td class="cell top-center" height="18"></td>
+										<td class="cell top-right" width="14" height="18"></td>
+									</tr>
+									<tr>
+										<td class="cell middle-left" width="14"></td>
+										<td class="cell middle-center content-area">
+											<p class="color-white font-size-li-text mb-0">Create, update and delete listings without leaving your platform</p>
+										</td>
+										<td class="cell middle-right" width="14"></td>
+									</tr>
+									<tr>
+										<td class="cell bottom-left" width="14" height="18"></td>
+										<td class="cell bottom-center" height="18"></td>
+										<td class="cell bottom-right" width="14" height="18"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- LIST ITEM : END -->
+						<!-- LIST ITEM : START -->
+						<div class="fl_item">
+							<div class="fl_item_heading color-tangerine font-size-li-heading">Fulfillment API</div>
+							<div class="fl_item_content">
+								<table class="li_bg_table" id="" width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="cell top-left" width="14" height="18"></td>
+										<td class="cell top-center" height="18"></td>
+										<td class="cell top-right" width="14" height="18"></td>
+									</tr>
+									<tr>
+										<td class="cell middle-left" width="14"></td>
+										<td class="cell middle-center content-area">
+											<ul>
+												<li class="font-size-li-text color-white">Create, cancel or update dispatches (including vehicle, stops and dates)</li>
+												<li class="font-size-li-text color-white">Provide dispatch status </li>
+												<li class="font-size-li-text color-white">Archive dispatches</li>
+												<li class="font-size-li-text color-white">Real-time tracking with live route information, location time-stamps, and delivery status updates</li>
+											</ul>
+										</td>
+										<td class="cell middle-right" width="14"></td>
+									</tr>
+									<tr>
+										<td class="cell bottom-left" width="14" height="18"></td>
+										<td class="cell bottom-center" height="18"></td>
+										<td class="cell bottom-right" width="14" height="18"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- LIST ITEM : END -->
+						<!-- LIST ITEM : START -->
+						<div class="fl_item">
+							<div class="fl_item_heading color-tangerine font-size-li-heading">Market Intelligence</div>
+							<div class="fl_item_content">
+								<table class="li_bg_table" id="" width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="cell top-left" width="14" height="18"></td>
+										<td class="cell top-center" height="18"></td>
+										<td class="cell top-right" width="14" height="18"></td>
+									</tr>
+									<tr>
+										<td class="cell middle-left" width="14"></td>
+										<td class="cell middle-center content-area">
+											<p class="color-white font-size-li-text mb-0">Utilize our unmatched volume of AI-powered data to inform, optimize and execute your pricing strategy</p>
+										</td>
+										<td class="cell middle-right" width="14"></td>
+									</tr>
+									<tr>
+										<td class="cell bottom-left" width="14" height="18"></td>
+										<td class="cell bottom-center" height="18"></td>
+										<td class="cell bottom-right" width="14" height="18"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- LIST ITEM : END -->
+						<!-- LIST ITEM : START -->
+						<div class="fl_item">
+							<div class="fl_item_heading color-tangerine font-size-li-heading">Dispatch<br/> Document API</div>
+							<div class="fl_item_content">
+								<table class="li_bg_table" id="" width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="cell top-left" width="14" height="18"></td>
+										<td class="cell top-center" height="18"></td>
+										<td class="cell top-right" width="14" height="18"></td>
+									</tr>
+									<tr>
+										<td class="cell middle-left" width="14"></td>
+										<td class="cell middle-center content-area">
+											<ul>
+												<li class="font-size-li-text color-white">Retrieve, create, update, and delete documents via API</li>
+												<li class="font-size-li-text color-white">Upload and download documentation</li>
+												<li class="font-size-li-text color-white">Manage dispatch-related documents </li>
+												<li class="font-size-li-text color-white">Get eBOL document link</li>
+											</ul>
+										</td>
+										<td class="cell middle-right" width="14"></td>
+									</tr>
+									<tr>
+										<td class="cell bottom-left" width="14" height="18"></td>
+										<td class="cell bottom-center" height="18"></td>
+										<td class="cell bottom-right" width="14" height="18"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- LIST ITEM : END -->
+						<!-- LIST ITEM : START -->
+						<div class="fl_item">
+							<div class="fl_item_heading color-tangerine font-size-li-heading">Event API</div>
+							<div class="fl_item_content">
+								<table class="li_bg_table" id="" width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="cell top-left" width="14" height="18"></td>
+										<td class="cell top-center" height="18"></td>
+										<td class="cell top-right" width="14" height="18"></td>
+									</tr>
+									<tr>
+										<td class="cell middle-left" width="14"></td>
+										<td class="cell middle-center content-area">
+											<ul>
+												<li class="font-size-li-text color-white">Receive real-time event notifications</li>
+												<li class="font-size-li-text color-white">Browse and subscribe to events for dispatching</li>
+												<li class="font-size-li-text color-white">Search and retrieve past events</li>
+											</ul>
+										</td>
+										<td class="cell middle-right" width="14"></td>
+									</tr>
+									<tr>
+										<td class="cell bottom-left" width="14" height="18"></td>
+										<td class="cell bottom-center" height="18"></td>
+										<td class="cell bottom-right" width="14" height="18"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- LIST ITEM : END -->
+						<!-- LIST ITEM : START -->
+						<div class="fl_item">
+							<div class="fl_item_heading color-tangerine font-size-li-heading">Offer API</div>
+							<div class="fl_item_content">
+								<table class="li_bg_table gold" id="" width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="cell top-left" width="10" height="59"></td>
+										<td class="cell top-center coming-soon text-center" height="59">
+											Coming Soon
+										</td>
+										<td class="cell top-right" width="10" height="59"></td>
+									</tr>
+									<tr>
+										<td class="cell middle-left" width="10"></td>
+										<td class="cell middle-center content-area">
+											<p class="color-white font-size-li-text mb-0">Accept and reject offers or propose counteroffers to price and dates for a more fully integrated marketplace</p>
+										</td>
+										<td class="cell middle-right" width="10"></td>
+									</tr>
+									<tr>
+										<td class="cell bottom-left" width="10" height="10"></td>
+										<td class="cell bottom-center" height="10"></td>
+										<td class="cell bottom-right" width="10" height="10"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- LIST ITEM : END -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Marketplace APIs : END -->
+		<!-- Marketplace Integrity : START -->
+		<section class="section animate__animated d-none" id="marketplace-integrity-screen">
+			<div class="screen_container">
+				<button class="x-btn" data-close="marketplace-integrity-screen">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">Marketplace Integrity</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 animate__delay-1s animate__fadeIn animate__animated">Leveraging the power of Cox Automotive data and security expertise, and partnering with trusted government agencies, we’re dedicated to making marketplace integrity our top priority. </p>
+				</div>
+				<!-- BG TABLE (OUTER) : START -->
+				<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="content-table">
+					<tr><td class="cell top-left table-corner" width="10" height="10"></td><td class="cell top-center"></td><td class="cell top-right table-corner" width="10" height="10"></td></tr>
+					<tr>
+						<td class="cell middle-left" width="10" height="100%"></td>
+						<td class="cell middle-center" height="100%">
+							<!-- BG TABLE (INNER) : START -->
+							<div class="content_container no-bg">
+								<div class="callout_row flex-row border-bottom">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#carrierVerificationModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/carrier-verification-thumb.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">Carrier Verification</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Easily view critical FMCSA information.</p>
+									</div>
+								</div>
+								<div class="callout_row flex-row-reverse">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#usermgmtModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/user-management-thumb.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">User Management</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Take control of each team member’s access and permissions.</p>
+									</div>
+								</div>
+							</div>
+							<!-- BG TABLE (INNER) : END -->
+						</td>
+						<td class="cell middle-right" width="10" height="100%"></td>
+					</tr>
+					<tr><td class="cell bottom-left table-corner" width="10" height="10"></td><td class="cell bottom-center" height="10"></td><td class="cell bottom-right table-corner" width="10" height="10"></td></tr>
+				</table>
+				<!-- BG TABLE (OUTER) : END -->
+			</div>
+		</section>
+		<!-- Marketplace Integrity : END -->
+		<!-- About the Marketplace : START -->
+		<section class="section animate__animated d-none" id="about-the-marketplace-screen">
+			<div class="screen_container">
+				<button class="x-btn">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">
+						About the Marketplace
+					</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 mb-0 animate__delay-1s animate__animated animate__fast animate__fadeIn ">
+						Don’t just manage your moves, master every move with control, confidence and transparency, all in one seamless end-to-end marketplace.
+					</p>
+				</div>
+				<!-- BG TABLE (OUTER) : START -->
+				<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="content-table">
+					<tr><td class="cell top-left table-corner" width="10" height="10"></td><td class="cell top-center"></td><td class="cell top-right table-corner" width="10" height="10"></td></tr>
+					<tr>
+						<td class="cell middle-left" width="10" height="100%"></td>
+						<td class="cell middle-center" height="100%">
+							<!-- BG TABLE (INNER) : START -->
+							<div class="content_container grid no-bg">
+								<div class="callout_card flex-column">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#dashboardModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											
+											<img src="assets/img/about-dashboard.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700 mb-0">Dashboard</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0 mb-0">Your “Command Center” for easy access to everything you need in one place.</p>
+									</div>
+								</div>
+								<div class="callout_card flex-column">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#createListingIntModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/about-create-listings.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700 mb-0">Create Listings</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0 mb-0">Powerful tools and enhanced functionality to create high-quality listings.</p>
+									</div>
+								</div>
+								<div class="callout_card flex-column">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#about-Modal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											
+											<img src="assets/img/about-manage-listings.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700 mb-0">Manage Listings</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0 mb-0">Powerful new functionality and a new intuitive experience to easily manage every listing in one place.</p>
+									</div>
+								</div>
+								<div class="callout_card flex-column">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#about-Modal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											
+											<img src="assets/img/about-manage-dispatches.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700 mb-0">Manage Dispatches</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0 mb-0">A streamlined experience to quickly manage any number of dispatches all in one place.</p>
+									</div>
+								</div>
+							</div>
+							<!-- BG TABLE (INNER) : END -->
+						</td>
+						<td class="cell middle-right" width="10" height="100%"></td>
+					</tr>
+					<tr><td class="cell bottom-left table-corner" width="10" height="10"></td><td class="cell bottom-center" height="10"></td><td class="cell bottom-right table-corner" width="10" height="10"></td></tr>
+				</table>
+				<!-- BG TABLE (OUTER) : END -->
+			</div>
+		</section>
+		<!-- About the Marketplace : END -->
+		<!-- See What's Coming : START -->
+		<section class="section animate__animated d-none" id="see-whats-coming-screen">
+			<div class="screen_container">
+				<button class="x-btn">
+					<img class="x-svg" src="assets/img/icon-x.svg"/>
+				</button>
+				<div class="text_container">
+					<h1 class="animate__animated animate__zoomIn animate__faster font-weight-700 font-line-height-3xl color-white font-saira-semi-condensed screen-title font-size-h1">
+						Coming Soon
+					</h1>
+					<p class="font-roboto color-white font-size-md font-line-height-md pb-0 mb-0 animate__delay-1s animate__animated animate__fast animate__fadeIn ">
+						The foundation is set and we’re continuing to innovate and build for YOU!
+					</p>
+				</div>
+				<!-- BG TABLE (OUTER) : START -->
+				<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="content-table">
+					<tr><td class="cell top-left table-corner" width="10" height="10"></td><td class="cell top-center"></td><td class="cell top-right table-corner" width="10" height="10"></td></tr>
+					<tr>
+						<td class="cell middle-left" width="10" height="100%"></td>
+						<td class="cell middle-center" height="100%">
+							<!-- BG TABLE (INNER) : START -->
+							<div class="content_container no-bg">
+								<div class="callout_row flex-row border-bottom">
+									<div class="callout_img">
+										<a href="#" data-bs-toggle="modal" data-bs-target="#blindRatingsModal">
+											<div class="zoom-pulse">
+												<div class="icon-zoom"></div>
+												<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+											</div>
+											<img src="assets/img/coming-soon-1.png"/>
+										</a>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">Blind Ratings</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Enhance trust within the marketplace by promoting unbiased feedback and fostering healthy partnerships without retaliation.</p>
+									</div>
+								</div>
+								<div class="callout_row flex-row-reverse border-bottom">
+									<div class="callout_img">
+										<div class="in-dev-btn">In Development</div>
+										<img src="assets/img/coming-soon-2.png"/>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">One-Click Dispatch</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Easily connect with your preferred carrier network, gain efficiencies by streamlining negotiations and dispatching digitally and save time by reducing the need for phone calls — allowing you to move vehicles faster and focus on what you do best, buying and selling cars.</p>
+									</div>
+								</div>
+								<div class="callout_row flex-row">
+									<div class="callout_img">
+										<div class="in-dev-btn">In Development</div>
+										<img src="assets/img/coming-soon-3.png"/>
+									</div>
+									<div class="callout_text">
+										<h2 class="font-saira-semi-condensed color-tangerine font-size-xl font-line-height-xl font-weight-700">Payment Facilitation</h2>
+										<p class="font-roboto color-white font-size-sm font-line-height-sm font-weight-400 pb-0">Release payments only after a successful delivery inspection, automate accounts payable, and build trust with carriers through guaranteed payments.</p>
+									</div>
+								</div>
+							</div>
+							<!-- BG TABLE (INNER) : END -->
+						</td>
+						<td class="cell middle-right" width="10" height="100%"></td>
+					</tr>
+					<tr><td class="cell bottom-left table-corner" width="10" height="10"></td><td class="cell bottom-center" height="10"></td><td class="cell bottom-right table-corner" width="10" height="10"></td></tr>
+				</table>
+				<!-- BG TABLE (OUTER) : END -->
+			</div>
+		</section>
+		<!-- See What's Coming : END -->
+		<!-- Footer : START -->
+		<footer class="app_footer">
+			<div class="footer_column exit_container app_control font-roboto color-white">
+				<div class="app_control_content d-none" id="footer-exit">
+					<div class="exit-svg-container">
+						<svg class="exit-arrow" xmlns="http://www.w3.org/2000/svg" width="49" height="36" viewBox="0 0 49 36" fill="none">
+							<path d="M0.399963 17.9925C0.424573 17.3491 0.691761 16.6038 1.13121 16.1362L15.5312 0.836216C16.5085 -0.039178 18.3789 -0.401284 19.4687 0.611216C20.5445 1.60968 20.5093 3.54675 19.4406 4.54872L9.31559 15.2929H46.3002C47.7908 15.2929 49.0002 16.5023 49.0002 17.9929C49.0002 19.4835 47.7908 20.6929 46.3002 20.6929H9.31559L19.4406 31.4371C20.3616 32.3617 20.5339 34.3656 19.4687 35.3746C18.407 36.3836 16.4664 36.0602 15.5312 35.1496L1.13121 19.8496C0.639021 19.3258 0.399963 18.7097 0.399963 17.9925Z" fill="white"/>
+						</svg>
+						<svg class="exit-door" xmlns="http://www.w3.org/2000/svg" width="26" height="68" viewBox="0 0 26 68" fill="none">
+							<path d="M0.399953 3.40015C0.414016 1.97635 1.71125 0.672072 3.13163 0.700152H22.9073C24.3171 0.700152 25.6003 1.98688 25.6003 3.40015V64.6002C25.6003 66.0134 24.3171 67.3002 22.9073 67.3002H3.13163C1.70783 67.3213 0.399953 66.0275 0.399953 64.6002C0.399953 63.1729 1.70774 61.8791 3.13163 61.9002H20.2136V6.10015H3.13163C1.6937 6.13179 0.385913 4.84159 0.399953 3.40015Z" fill="white"/>
+						</svg>
+					</div>
+					 <div class="exit-text">Exit</div>
+				</div>
+			</div>
+			<div class="footer_column logo_container">
+				<img class="cd_logo" src="assets/img/Central_Dispatch_rgb_reverse.svg"/>
+			</div>
+			<div class="footer_column menu_container app_control font-roboto color-white">
+				<div class="app_control_content d-none" id="footer-menu">
+					<div class="footer-menu-div">Menu </div>
+					<div class="footer-menu-div menu-svg-container">
+						<div class="menu-line menu-line-1"></div>
+						<div class="menu-line menu-line-2"></div>
+						<div class="menu-line menu-line-3 short"></div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer : END -->
+		<!-- UI Elements : START -->
+		<div class="timer-overlay z-100" style="display: none;">
+			<img class="_svg" src="assets/img/icon-clock.svg"/>
+			<span class="timer-title">Are you still there?</span>
+			<span class="timer-text">Your session will expire in <span id="timer-counter">60</span> seconds.</span>
+			<a href="#" id="exit-timer">EXIT NOW</a>
+		</div>
+		<div class="rotate-msg-overlay z-120" style="display: none;">
+			<img class="_svg" src="assets/img/icon-rotate.svg"/>
+			<h1>Please rotate your device</h1>
+			<p>This demo is best viewed in portrait mode.</p>
+		</div>
+		<div class="dark-overlay" style="display: none;"></div>
+		<div class="img-overlay"></div>
+		<video class="video_bg" id="video-bg" src="assets/video/cd-nada-bg-video.mp4" poster="assets/img/poster.jpg" autoplay loop muted></video>
+		<!-- UI Elements : END -->
 	</main>
 	<!-- App Container : END -->
+	<!-- Modals : START -->
+	<div class="modal fade" id="mannListingIntModal" tabindex="-1" aria-labelledby="mannListingIntModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="modal-wrap">
+						<img id="" class="listing-img modal-asset d-none animate__animated" src="assets/img/mann-listing-int-modal-2.png"/>
+						<div id="inner-modal-overlay" style="display: none;"  class="inner-modal-overlay listing-overlay modal-asset"></div>
+						<div class="hotspot hs-5">
+							<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
+						</div>
+						<img id="" class="w-100 listing-trigger" src="assets/img/mann-listing-int-modal-1.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="createListingIntModal" tabindex="-1" aria-labelledby="createListingIntModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="modal-wrap scrollable-wrap">
+						<img id="" class="modal-asset w-100 sticky-top" src="assets/img/create-listing-top-nav.png"/>
+						<img id="" class="w-100" src="assets/img/create-listing-page.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<img id="" class="w-100" src="assets/img/dashboard-admin-panel.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="blindRatingsModal" tabindex="-1" aria-labelledby="blindRatingsModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<a href="" class="img-toggle pos-relative">
+						<div class="hotspot hs-6 z-60">
+							<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
+						</div>
+						<img id="" class="transition blind-ratings-modal-2 z-50" src="assets/img/blind-ratings-modal-2.png"  style="display: none;" />
+						<img id="" class="blind-ratings-modal-1 w-100 h-auto z-40" src="assets/img/blind-ratings-modal-1.png" style=""/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="usermgmtModal" tabindex="-1" aria-labelledby="usermgmtModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="modal-wrap">
+						<img id="drawer-img" class="drawer-img modal-asset d-none animate__animated" src="assets/img/add-user.png"/>
+						<div id="inner-modal-overlay" style="display: none;" class="inner-modal-overlay drawer-overlay modal-asset"></div>
+						<div class="hotspot pc-hs-1">
+							<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
+						</div>
+						<!-- <div class="" id="drawer-trigger"></div> -->
+						<img id="drawer-trigger" class="w-100 drawer-trigger" src="assets/img/user-management-compressed.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="realTimeTrkModal" tabindex="-1" aria-labelledby="realTimeTrkModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="modal-wrap">
+						<img id="" class="map-img modal-asset d-none animate__animated" src="assets/img/real-time-tracking-map.png"/>
+						<div id="inner-modal-overlay" style="display: none;"  class="inner-modal-overlay map-overlay modal-asset"></div>
+						<div class="hotspot hs-1">
+							<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
+						</div>
+						<!-- <div class="" id="drawer-trigger"></div> -->
+						<img id="map-trigger" class="w-100 map-trigger" src="assets/img/real-time-tracking-dispatches.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="appInspectionModal" tabindex="-1" aria-labelledby="appInspectionModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="modal-wrap">
+						<div class="phone-wrap">
+							<div class="phone-screen">
+								<img id="" class="phone-start-button modal-asset animate__animated z-70" src="assets/img/vehicle-inspections-phone-1-start-button.png"/>
+								<img id="" class="phone-img z-60 phone-img-1 modal-asset animate__animated" src="assets/img/vehicle-inspections-phone-1.png"/>
+
+								<div class="hotspot hs-4 op-0">
+									<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
+								</div>
+								<img id="" class="phone-img z-50 phone-img-2 modal-asset animate__animated" src="assets/img/vehicle-inspections-phone-2.png"/>
+
+								<img id="" class="phone-img z-40 phone-img-3 modal-asset" src="assets/img/vehicle-inspections-phone-3.png"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="ebolModal" tabindex="-1" aria-labelledby="ebolModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="modal-wrap">
+						<img id="" class="w-100" src="assets/img/fpo-img.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="carrierVerificationModal" tabindex="-1" aria-labelledby="carrierVerificationModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="hotspot hs-2">
+						<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
+					</div>
+					<img id="" class="w-100" src="assets/img/company-overview.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="marketIntelligenceModal" tabindex="-1" aria-labelledby="marketIntelligenceModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="scroll-wrap">
+						<img id="" class="w-100" src="assets/img/modal-market-intelligence.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="priceCheckModal" tabindex="-1" aria-labelledby="priceCheckModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-body">
+					<a href="" class="img-toggle pos-relative">
+						<div class="hotspot hs-3 z-60">
+							<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
+						</div>
+						<img id="pc-plus-img" class="transition top-img w-100 h-auto pos-absolute pos-top-left z-50" src="assets/img/price-check.png"  />
+						<img id="pc-img" class="bottom-img w-100 h-auto z-40" src="assets/img/price-check-plus.png" style=""/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modals : END -->
 	<!-- Scripts : START -->
+	<script src="assets/js/lottie-player.js" crossorigin="anonymous"></script>
 	<script src="assets/js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script src="assets/js/hammer.min.js"></script>
+	<script src="assets/js/app.js"></script>
 	<!-- Scripts : END -->
 
 </body>

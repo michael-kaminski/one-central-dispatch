@@ -9,6 +9,27 @@ html{
 body{
 	height: 100%;
 	background: var(--cd-color-blacktop);
+	
+	
+	
+	
+	.font-size-h1, h1{
+		letter-spacing: var(--cd-font-letter-spacing-h1);
+		font-size: var(--cd-font-size-h1);
+	}
+	.font-size-h2, h2{
+		font-size: var(--cd-font-size-h2);
+	}
+	.font-size-h3, h3{
+		font-size: var(--cd-font-size-h3);
+	}
+	.font-size-p-large, p.large{
+		font-size: var(--cd-font-size-p-large);
+	}
+	.font-size-p, p{
+		font-size: var(--cd-font-size-p);
+	}
+
 	.app{
 		background: var(--cd-color-blacktop);
 		display: flex;
@@ -270,6 +291,9 @@ nav{
 			line-height: 95%; /* 64.6px */
 			letter-spacing: -1.36px;
 			margin-bottom: 8px;
+			&.premium{
+				font-size: var(--cd-font-size-h2-super);
+			}
 		}
 		.price{
 			font-style: normal;
@@ -584,3 +608,206 @@ footer{
 }
 
 
+.callout_card{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 36px;
+
+	.callout_img{
+		img{
+			width: 100%;
+		}
+	}
+	.callout_text{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 12px;
+	}
+}
+
+.callout_row{
+	display: flex;
+	padding: 80px 0px;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+	align-self: stretch;
+	&:first-child{
+		padding-top: 0px !important;
+	}
+	&:last-child{
+		padding-bottom: 0px !important;
+	}
+
+	.callout_text{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 1 0 0;
+	}
+	.callout_img {
+	    flex: 1;
+	    position: relative;
+	    img{
+			width: 100%;
+			max-width: 630px;
+		}
+	}
+}
+.callout_img{
+	a{
+		position: relative;
+		display: block;
+	}
+} 
+
+
+.fancy_list{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 40px;
+}
+.fl_item{
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	.fl_item_heading{
+		font-size: var(--cd-font-size-li-heading);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%;
+		letter-spacing: -1.08px;
+		flex: 1 0 440px;
+		padding-top: 36px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		align-items: flex-start;
+		text-align: right;
+		font-family: var(--cd-font-family-saira);
+	}
+	.fl_item_content{
+		width: 100%;
+		p{
+			font-size: var(--cd-font-size-li-text);
+		}
+		.content-area{
+			padding: 30px;
+			ul{
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+}
+
+
+.li_bg_table{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	.cell{
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center center;
+		&.table-corner{
+			width: 14px;
+			height: 18px;
+		}
+		&.top-left{
+			background-image: url(../img/list-item-core_01.png);
+		}
+		&.top-center{
+			background-image: url(../img/list-item-core_02.png);
+		}
+		&.top-right{
+			background-image: url(../img/list-item-core_03.png);
+		}
+		&.middle-left{
+			background-image: url(../img/list-item-core_04.png);
+		}
+		&.middle-center{
+			background-image: url(../img/list-item-core_05.png);
+		}
+		&.middle-right{
+			background-image: url(../img/list-item-core_06.png);
+		}
+		&.bottom-left{
+			background-image: url(../img/list-item-core_07.png);
+		}
+		&.bottom-center{
+			background-image: url(../img/list-item-core_08.png);
+		}
+		&.bottom-right{
+			background-image: url(../img/list-item-core_09.png);
+		}
+	}
+}
+.li_bg_table.gold{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	.cell{
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center center;
+		&.table-corner{
+			width: 10px;
+			height: 10px;
+			&.top{
+				width: 10px;
+				height: 59px;
+			}
+			
+		}
+		&.top-left{
+			background-image: url(../img/gold-list-item-core_01.png);
+		}
+		&.top-center{
+			background-image: url(../img/gold-list-item-core_02.png);
+		}
+		&.top-right{
+			background-image: url(../img/gold-list-item-core_03.png);
+		}
+		&.middle-left{
+			background-image: url(../img/gold-list-item-core_04.png);
+		}
+		&.middle-center{
+			background-image: url(../img/gold-list-item-core_05.png);
+		}
+		&.middle-right{
+			background-image: url(../img/gold-list-item-core_06.png);
+		}
+		&.bottom-left{
+			background-image: url(../img/gold-list-item-core_07.png);
+		}
+		&.bottom-center{
+			background-image: url(../img/gold-list-item-core_08.png);
+		}
+		&.bottom-right{
+			background-image: url(../img/gold-list-item-core_09.png);
+		}
+
+		&.coming-soon{
+			color: var(--cd-color-blacktop);
+			text-align: center;
+			leading-trim: both;
+			text-edge: cap;
+			font-family: var(--cd-font-family-saira);
+			font-size: var(--cd-font-size-xs);
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%; /* 28px */
+			letter-spacing: 0.56px;
+			text-transform: uppercase;
+		}
+	}
+}

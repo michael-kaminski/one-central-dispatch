@@ -53,16 +53,28 @@ div#preload {
 	letter-spacing: var(--cd-font-letter-spacing-h1);
 	font-size: var(--cd-font-size-h1);
 }
+.font-size-h2{
+	font-size: var(--cd-font-size-h2);
+}
+.font-size-h3{
+	font-size: var(--cd-font-size-h3);
+}
+.font-size-p-large{
+	font-size: var(--cd-font-size-p-large);
+}
+.font-size-p{
+	font-size: var(--cd-font-size-p);
+}
+.font-size-p-large{
+	font-size: var(--cd-font-size-p-large);
+}
 .font-roboto{
 	font-family: var(--cd-font-family-roboto);
 }
 .font-saira-semi-condensed{
 	font-family: var(--cd-font-family-saira);
 }
-.font-size-3xl{
-	font-size: var(--cd-font-size-3xl);
-}
-.font-size-2xl{
+.font-size-h3{
 	font-size: var(--cd-font-size-2xl);
 }
 .font-size-xl{
