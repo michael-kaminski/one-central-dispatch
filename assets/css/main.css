@@ -45,6 +45,8 @@
   --cd-font-size-title: 72px;
   --cd-font-size-tag: 24px;
   --cd-font-size-btn: 18px;
+  --cd-btn-padding: 20px 30px;
+  --cd-container-padding: 30px 50px;
 }
 @media screen and (min-width: 1000px) {
   :root {
@@ -59,6 +61,8 @@
     --cd-font-size-title: 96px;
     --cd-font-size-tag: 32px;
     --cd-font-size-btn: 20px;
+    --cd-btn-padding: 24px 30px;
+    --cd-container-padding: 40px 60px;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -75,6 +79,9 @@
     --cd-font-size-title: 253.67px;
     --cd-font-size-tag: 53.25px;
     --cd-font-size-btn: 40px;
+    --cd-start-btn-padding: 50px 63px;
+    --cd-btn-padding: 62px;
+    --cd-container-padding: 70px 90px;
   }
 }
 
@@ -274,11 +281,10 @@ button:focus:not(:focus-visible) {
 }
 
 .img-btn {
-  /*width: 872px;
-  height: 173px;*/
+  max-width: 872px;
   width: 100%;
   height: auto;
-  padding: 64px;
+  padding: var(--cd-btn-padding);
   background-image: url(../img/BTN-NAV-BLANK.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -288,7 +294,7 @@ button:focus:not(:focus-visible) {
   align-items: center;
   color: var(--cd-color-white);
   font-family: var(--cd-font-family-roboto);
-  font-size: 40px;
+  font-size: var(--cd-font-size-btn);
   font-style: normal;
   font-weight: 700;
   line-height: 42.61px; /* 106.525% */
@@ -362,8 +368,10 @@ button:focus:not(:focus-visible) {
 }
 
 .start-btn {
-  width: 805px;
-  height: 143px;
+  max-width: 805px;
+  width: 100%;
+  height: auto;
+  padding: var(--cd-start-btn-padding);
   background-image: url(../img/START-BTN-BLANK.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -373,7 +381,7 @@ button:focus:not(:focus-visible) {
   align-items: center;
   color: var(--cd-color-blacktop);
   font-family: var(--cd-font-family-roboto);
-  font-size: 40px;
+  font-size: var(--cd-font-size-btn);
   font-style: normal;
   font-weight: 700;
   line-height: 42.61px; /* 106.525% */

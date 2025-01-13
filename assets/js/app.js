@@ -74,6 +74,63 @@ var mc = new Hammer(myElement);
 
 
 
+function hideUI() {
+    $('#video-bg')[0].pause(); 
+ 	$('#video-bg').addClass('blur');
+ 	//set UI opacity to 0
+ 	$('.app_footer').addClass('op-0');
+ 	$('.img-overlay').addClass('op-0');
+ 	$( '.section' ).each(function(index) {
+	   // check section is visible
+        if($(this).is(":visible")){
+
+           	$(this).addClass('op-0');
+        } else{
+            //do nothing, its hidden
+        }
+	});
+}
+
+function showUI() {
+    $('#video-bg')[0].play(); 
+ 	$('#video-bg').removeClass('blur');
+ 	//set UI opacity to 0
+ 	$('.app_footer').removeClass('op-0');
+ 	$('.img-overlay').removeClass('op-0');
+ 	$( '.section' ).each(function(index) {
+	   // check if section has opacity lowered
+        if($(this).hasClass("op-0")){
+           $(this).removeClass('op-0');
+        } else{
+            //do nothing, its hidden
+        }
+	});
+}
+
+function checkWindow() {
+    //check for landscpe or portrait
+	if ($(window).width() > $(window).height()) {
+	
+	console.warn("Alert - Viewport is in Landscape Mode.");
+
+	hideUI();
+
+	//show the rotate device screen
+	$( '.rotate-msg-overlay' ).fadeIn();
+
+	} else {
+
+		console.log("Portrait mode"); 
+		showUI();
+		$( '.rotate-msg-overlay' ).fadeOut();
+	}
+}
+
+
+$(window).on('resize', function(){
+    checkWindow();
+});
+
 
 /////////////////////////////////////////////////////////
 // START DOC READY  /////////////////////////////////////
@@ -86,9 +143,13 @@ $( document ).ready(function() {
 
 
 
+    
 
 
 
+
+
+    //Video
 	let vid = document.getElementById("video_bg");
 
 	function playVid() {
@@ -99,17 +160,24 @@ $( document ).ready(function() {
 	    vid.pause();
 	}
 
+
+
 	var timer = '';
 
 	// If theres no activity for 30 (30000) seconds do something 
-	// temporarily set to 5 min (300000)
-	var activityTimeout = setTimeout(inActive, 300000);
+	// temporarily set to 5 sec (5000)
+	var activityTimeout = setTimeout(inActive, 5000);
 
+
+
+
+	//When timer screen 60 sec countdown reaches zero, reset everything and go back to start
 	function backtoStart(){
 		console.log('backtoStart() was executed.');
 		clearTimeout(activityTimeout);
-	    activityTimeout = setTimeout(inActive, 300000);
+	    activityTimeout = setTimeout(inActive, 5000);
 
+	    $(document).bind('keyup keypress tap taphold click', function(){ resetActive(); });
 
 	    $( '.section' ).each(function(index) {
 			// check section has opacity class
@@ -118,7 +186,7 @@ $( document ).ready(function() {
 			} else{
 				//do nothing, its hidden
 			}
-
+			// check for animate class
 			if($(this).hasClass("animate__fadeIn")){
 				$(this).removeClass('animate__fadeIn').addClass('animate__fadeOut');
 			} else{
@@ -126,6 +194,7 @@ $( document ).ready(function() {
 			}
 		});
 		$('.dark-overlay').fadeOut();
+		$('.img-overlay').removeClass('op-0');
 	    $('#video-bg')[0].play(); 
  		$('#video-bg').removeClass('blur'); 
  		//$('.section').addClass('d-none');
@@ -137,66 +206,64 @@ $( document ).ready(function() {
 	 	},500);
 	}
 
+	//Activity detected, reset activityTimeout, play video bg, remove blur, set UI elements back to opacity:1
 	function resetActive(){
 		console.log('resetActive() was executed.');
+
+
 	    $('#app-container').attr('class', 'app_container active');
+
+	    //reset activityTimeout
 	    clearTimeout(activityTimeout);
-	    activityTimeout = setTimeout(inActive, 300000);
-	    clearInterval(timer);
-	    $('#video-bg')[0].play(); 
-	 	$('#video-bg').removeClass('blur');
-	 	//set UI opacity to 1
-	 	$('.app_footer').removeClass('op-0');
-	 	$('.img-overlay').removeClass('op-0');
-	 	$( '.section' ).each(function(index) {
-		   // check section has opacity class
-            if($(this).hasClass("op-0")){
-               $(this).removeClass('op-0');
-            } else{
-                //do nothing, its hidden
-            }
-		});
+	    activityTimeout = setTimeout(inActive, 5000);
+	    
+	    
+	    showUI();
+
 		//hide the timer screen
 		$( '.timer-overlay' ).fadeOut();
 
 		
 	}
 
-	// No activity do something.
+	// No activity detected.
 	function inActive(){
 		console.log('inActive() was executed.');
+
+		//not sure if this is working, 
 		$(document).unbind('keyup keypress tap taphold click', function(){
-			resetActive();
+			 
+			$("#exit-timer").click(function (e) {
+				e.preventDefault();
+				// clear activity timer
+				clearTimeout(activityTimeout);
+
+				//reset activity timeout
+				activityTimeout = setTimeout(inActive, 5000);
+
+				//clear countdown timer
+				clearInterval(timer);
+
+				//set timer text to 60
+				$('#timer-counter').text('60');
+
+			});
 		});
 	    //$(document.body).attr('class', 'app inactive');
 	    $('#app-container').attr('class', 'app_container inactive');
-	    $('#video-bg')[0].pause(); 
-	 	$('#video-bg').addClass('blur');
-	 	//set UI opacity to 0
-	 	$('.app_footer').addClass('op-0');
-	 	$('.img-overlay').addClass('op-0');
-	 	$( '.section' ).each(function(index) {
-		   // check section is visible
-            if($(this).is(":visible")){
-               $(this).addClass('op-0');
-            } else{
-                //do nothing, its hidden
-            }
-		});
+	   
+	    //hide UI elements
+	   	hideUI();
+
 		//show the timer screen
 		$( '.timer-overlay' ).fadeIn();
 
 		//Start the clock
 		var sec = 60;
 		var timer = setInterval(function() {
-		    $('#timer-counter').animate({
-		        // opacity: 0.25,
-		        // fontSize: '2em'
-		    }, 500, function() {
-		        // $('#hideMsg span').css('opacity', 1);
-		        // $('#hideMsg span').css('font-size', '1em');
-		        $('#timer-counter').text(sec--);
-		    })
+		    
+
+			$('#timer-counter').text(sec--);
 
 		    if (sec == -1) {
 		        //reset to start screen
@@ -206,36 +273,14 @@ $( document ).ready(function() {
 		        $( '.timer-overlay' ).fadeOut();
 		        backtoStart();
 		    }
-
-		    
-		   
-
 		}, 1000);
-
-		 //user took action on timer screen, back to business
-		$("#exit-timer").click(function (e) {
-			e.preventDefault();
-			// clear activity timer
-			clearTimeout(activityTimeout);
-
-			//reset activity timeout
-    		activityTimeout = setTimeout(inActive, 300000);
-
-    		//clear countdown timer
-			clearInterval(timer);
-
-			//set timer text to 60
-			$('#timer-counter').text('60');
-
-		});
-
 
 	}
 
-	
+
+
 	// Check for mousemove, could add other events here such as checking for key presses ect.
 	$(document).bind('keyup keypress tap taphold click', function(){
-		
 		resetActive();
 	});
 

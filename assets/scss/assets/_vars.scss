@@ -47,6 +47,8 @@
 	--cd-font-size-title: 72px;
 	--cd-font-size-tag: 24px;
 	--cd-font-size-btn: 18px;
+	--cd-btn-padding: 20px 30px;
+	--cd-container-padding: 30px 50px;
 
 	@media screen and (min-width: 1000px) {
 		--cd-font-size-p-small: 20px;
@@ -60,6 +62,8 @@
 		--cd-font-size-title: 96px;
 		--cd-font-size-tag: 32px;
 		--cd-font-size-btn: 20px;
+		--cd-btn-padding: 24px 30px;
+		--cd-container-padding: 40px 60px;
 	}
 	@media screen and (min-width: 2000px) {
 		--cd-font-size-p-small: 24px;
@@ -74,5 +78,8 @@
 		--cd-font-size-title: 253.67px;
 		--cd-font-size-tag: 53.25px;
 		--cd-font-size-btn: 40px;
+		--cd-start-btn-padding: 50px 63px;
+		--cd-btn-padding: 62px;
+		--cd-container-padding: 70px 90px;
 	}
 }
