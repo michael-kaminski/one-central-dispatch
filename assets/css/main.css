@@ -21,8 +21,6 @@
   --cd-font-size-md: 40px;
   --cd-font-size-sm: 32px;
   --cd-font-size-xs: 28px;
-  --cd-font-size-li-heading: 54px;
-  --cd-font-size-li-text: 26px;
   --cd-font-line-height-3xl: 95%;
   --cd-font-line-height-2xl: 53.1%;
   --cd-font-line-height-xl: 95%;
@@ -35,31 +33,46 @@
   --cd-font-family-saira: "Saira Semi Condensed";
   --cd-font-family-roboto: "Roboto";
   --cd-gradient-gold: linear-gradient(180deg, var(--cd-color-sunshine) 0%, var(--cd-color-sunflower) 100%);
+  --cd-font-size-p-small:16px;
+  --cd-font-size-p:18px;
+  --cd-font-size-p-large:22px;
+  --cd-font-size-li-heading: 54px;
+  --cd-font-size-li-text: 26px;
+  --cd-font-size-h1: 48px;
+  --cd-font-size-h2: 28px;
+  --cd-font-size-h3: 52px;
+  --cd-font-size-title: 72px;
+  --cd-font-size-tag: 24px;
+  --cd-font-size-btn: 18px;
 }
 @media screen and (min-width: 1000px) {
   :root {
-    --cd-font-size-3xl: 120px;
-    --cd-font-size-2xl: 72px;
-    --cd-font-size-xl: 68px;
-    --cd-font-size-lg: 48px;
-    --cd-font-size-md: 40px;
-    --cd-font-size-sm: 32px;
-    --cd-font-size-xs: 28px;
+    --cd-font-size-p-small: 20px;
+    --cd-font-size-p: 22px;
+    --cd-font-size-p-large: 28px;
     --cd-font-size-li-heading: 54px;
     --cd-font-size-li-text: 26px;
+    --cd-font-size-h1:64px;
+    --cd-font-size-h2: 40px;
+    --cd-font-size-h3: 64px;
+    --cd-font-size-title: 96px;
+    --cd-font-size-tag: 32px;
+    --cd-font-size-btn: 20px;
   }
 }
 @media screen and (min-width: 2000px) {
   :root {
-    --cd-font-size-3xl: 120px;
-    --cd-font-size-2xl: 72px;
-    --cd-font-size-xl: 68px;
-    --cd-font-size-lg: 48px;
-    --cd-font-size-md: 40px;
-    --cd-font-size-sm: 32px;
-    --cd-font-size-xs: 28px;
+    --cd-font-size-p-small: 24px;
+    --cd-font-size-p: 28px;
+    --cd-font-size-p-large: 36px;
     --cd-font-size-li-heading: 54px;
     --cd-font-size-li-text: 26px;
+    --cd-font-size-h1:120px;
+    --cd-font-size-h2: 68px;
+    --cd-font-size-h3: 72px;
+    --cd-font-size-title: 253.67px;
+    --cd-font-size-tag: 53.25px;
+    --cd-font-size-btn: 40px;
   }
 }
 
@@ -601,7 +614,7 @@ body .app {
   color: #FFF;
   text-align: center;
   font-family: var(--cd-font-family-saira);
-  font-size: 253.667px;
+  font-size: var(--cd-font-size-title);
   font-style: normal;
   font-weight: 700;
   line-height: 90%;
@@ -813,7 +826,7 @@ nav .btn_container {
   padding: 60px 100px;
 }
 .plans .plan h2 {
-  font-size: var(--cd-font-size-xl);
+  font-size: var(--cd-font-size-h2);
   font-style: normal;
   font-weight: 700;
   line-height: 95%; /* 64.6px */
@@ -934,7 +947,7 @@ nav .btn_container {
 .plan ul li {
   color: var(--cd-color-white);
   font-family: var(--cd-font-family-roboto);
-  font-size: var(--cd-font-size-xs);
+  font-size: var(--cd-font-size-p);
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
