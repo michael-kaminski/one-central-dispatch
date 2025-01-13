@@ -291,9 +291,6 @@ nav{
 			line-height: 95%; /* 64.6px */
 			letter-spacing: -1.36px;
 			margin-bottom: 8px;
-			&.premium{
-				font-size: var(--cd-font-size-h2-super);
-			}
 		}
 		.price{
 			font-style: normal;
@@ -334,6 +331,7 @@ nav{
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+			font-size: var(--cd-font-size-h2-super);
 		}
 	}
 
@@ -345,6 +343,13 @@ nav{
 		.premium {
 			transform: scale(1.1);
 			background-image: url(../img/PREMIUM-BG-EXP.png);
+			h2{
+				background: var(--cd-gradient-gold);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				font-size: var(--cd-font-size-h2-super);
+			}
 		}
 	}
 }

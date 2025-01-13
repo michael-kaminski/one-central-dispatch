@@ -1,5 +1,5 @@
 
-$('body').append('<div class="loading-screen" id="loading-screen"><h1 class="font-saira-semi-condensed color-tangerine">Loading Central Dispatch Touchscreen Experience...</h1><div class="loader">Loading...</div></div><div id="image-loader"><div id="preloader"><img src="assets/img/about-create-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-dashboard.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/add-user.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-START-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-verification-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-nada-touchscreen-background.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-manheim-integration.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/Central_Dispatch_rgb_reverse.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/company-overview.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/dashboard-admin-panel.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-clock.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-exit.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-menu.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-minus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-plus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-rotate.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x-gold.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-zoom.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/log-into-CD.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/marketplace-intel-report-thumb-compressed.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/modal-market-intelligence.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/nav-arrow.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/ONE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/poster.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG-EXP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check-plus.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-map.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/START-BTN-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image" id="start_hover"><img src="assets/img/START-BTN-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/tile.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1-start-button.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-3.png" width="1" height="1" alt="Preloaded Image"></div></div>');
+$('body').append('<div class="d-flex text-center loading-screen" id="loading-screen"><h1 class="font-size-h2 font-saira-semi-condensed color-tangerine">Loading Central Dispatch Touchscreen Experience...</h1><div class="loader">Loading...</div></div><div id="image-loader"><div id="preloader"><img src="assets/img/about-create-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-dashboard.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/add-user.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-START-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-verification-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-nada-touchscreen-background.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-manheim-integration.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/Central_Dispatch_rgb_reverse.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/company-overview.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/dashboard-admin-panel.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-clock.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-exit.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-menu.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-minus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-plus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-rotate.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x-gold.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-zoom.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/log-into-CD.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/marketplace-intel-report-thumb-compressed.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/modal-market-intelligence.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/nav-arrow.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/ONE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/poster.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG-EXP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check-plus.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-map.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/START-BTN-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image" id="start_hover"><img src="assets/img/START-BTN-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/tile.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1-start-button.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-3.png" width="1" height="1" alt="Preloaded Image"></div></div>');
 
 $(window).on('load', function(){
   setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
@@ -19,7 +19,7 @@ function removeLoader(){
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
-      .register("/clients/central-dispatch/nada-2025/dev/serviceWorker.js")
+      .register("/clients/central-dispatch/nada-2025/stg/serviceWorker.js")
       .then(res => console.log("service worker registered"))
       .catch(err => console.log("service worker not registered", err))
   })
@@ -99,36 +99,50 @@ $( document ).ready(function() {
 	    vid.pause();
 	}
 
-
+	var timer = '';
 
 	// If theres no activity for 30 (30000) seconds do something 
 	// temporarily set to 5 min (300000)
 	var activityTimeout = setTimeout(inActive, 300000);
 
 	function backtoStart(){
+		console.log('backtoStart() was executed.');
 		clearTimeout(activityTimeout);
 	    activityTimeout = setTimeout(inActive, 300000);
-		window.setTimeout(function(){
-		 	$('.section').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-		 	$('.dark-overlay').fadeOut();
-	 	},100);
-	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].play(); 
-	 		$('#video-bg').removeClass('blur'); 
-	 		$('.section').addClass('d-none');
-	 		$('#start-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-	 		$('#footer-menu').addClass('d-none');
-	 		$('#footer-exit').addClass('d-none');
+
+
+	    $( '.section' ).each(function(index) {
+			// check section has opacity class
+			if($(this).hasClass("op-0")){
+				$(this).removeClass('op-0');
+			} else{
+				//do nothing, its hidden
+			}
+
+			if($(this).hasClass("animate__fadeIn")){
+				$(this).removeClass('animate__fadeIn').addClass('animate__fadeOut');
+			} else{
+				//do nothing, its hidden
+			}
+		});
+		$('.dark-overlay').fadeOut();
+	    $('#video-bg')[0].play(); 
+ 		$('#video-bg').removeClass('blur'); 
+ 		//$('.section').addClass('d-none');
+ 		$('#start-screen').removeClass('d-none animate__fadeOut op-0').addClass('animate__fadeIn');
+ 		$('#footer-menu').addClass('d-none');
+ 		$('#footer-exit').addClass('d-none');
+ 		window.setTimeout(function(){
+			$(this).addClass('d-none');
 	 	},500);
 	}
 
 	function resetActive(){
-	    $(document.body).attr('class', 'app active');
-	    $(document).bind('keyup keypress tap taphold click', function(){
-			resetActive();
-		});
+		console.log('resetActive() was executed.');
+	    $('#app-container').attr('class', 'app_container active');
 	    clearTimeout(activityTimeout);
 	    activityTimeout = setTimeout(inActive, 300000);
+	    clearInterval(timer);
 	    $('#video-bg')[0].play(); 
 	 	$('#video-bg').removeClass('blur');
 	 	//set UI opacity to 1
@@ -150,11 +164,12 @@ $( document ).ready(function() {
 
 	// No activity do something.
 	function inActive(){
-
+		console.log('inActive() was executed.');
 		$(document).unbind('keyup keypress tap taphold click', function(){
 			resetActive();
 		});
-	    $(document.body).attr('class', 'app inactive');
+	    //$(document.body).attr('class', 'app inactive');
+	    $('#app-container').attr('class', 'app_container inactive');
 	    $('#video-bg')[0].pause(); 
 	 	$('#video-bg').addClass('blur');
 	 	//set UI opacity to 0
@@ -168,7 +183,7 @@ $( document ).ready(function() {
                 //do nothing, its hidden
             }
 		});
-		//show the timer screem
+		//show the timer screen
 		$( '.timer-overlay' ).fadeIn();
 
 		//Start the clock
@@ -185,24 +200,34 @@ $( document ).ready(function() {
 
 		    if (sec == -1) {
 		        //reset to start screen
+		        console.log('timer ran out.');
 		        clearInterval(timer);
 		        $('#timer-counter').text('60');
-		        resetActive();
+		        $( '.timer-overlay' ).fadeOut();
 		        backtoStart();
 		    }
 
 		    
-
-			$("#exit-timer").click(function (e) {
-				e.preventDefault();
-				resetActive();
-				clearInterval(timer);
-				$('#timer-counter').text('60');
-			});
+		   
 
 		}, 1000);
 
-		
+		 //user took action on timer screen, back to business
+		$("#exit-timer").click(function (e) {
+			e.preventDefault();
+			// clear activity timer
+			clearTimeout(activityTimeout);
+
+			//reset activity timeout
+    		activityTimeout = setTimeout(inActive, 300000);
+
+    		//clear countdown timer
+			clearInterval(timer);
+
+			//set timer text to 60
+			$('#timer-counter').text('60');
+
+		});
 
 
 	}
@@ -210,6 +235,7 @@ $( document ).ready(function() {
 	
 	// Check for mousemove, could add other events here such as checking for key presses ect.
 	$(document).bind('keyup keypress tap taphold click', function(){
+		
 		resetActive();
 	});
 
