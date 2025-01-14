@@ -122,8 +122,6 @@
 }
 
 
-
-
 //TIMER
 
 .timer-overlay{
@@ -132,6 +130,8 @@
 	gap: 50px;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+    height: 100%;
 	._svg{
 		width: 150px;
 		height: 150px;

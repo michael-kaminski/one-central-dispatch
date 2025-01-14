@@ -1,5 +1,7 @@
 
-$('body').append('<div class="d-flex text-center loading-screen" id="loading-screen"><h1 class="font-size-h2 font-saira-semi-condensed color-tangerine">Loading Central Dispatch Touchscreen Experience...</h1><div class="loader">Loading...</div></div><div id="image-loader"><div id="preloader"><img src="assets/img/about-create-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-dashboard.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/add-user.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-START-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-verification-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-nada-touchscreen-background.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-manheim-integration.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/Central_Dispatch_rgb_reverse.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/company-overview.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/dashboard-admin-panel.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-clock.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-exit.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-menu.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-minus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-plus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-rotate.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x-gold.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-zoom.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/log-into-CD.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/marketplace-intel-report-thumb-compressed.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/modal-market-intelligence.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/nav-arrow.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/ONE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/poster.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG-EXP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check-plus.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-map.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/START-BTN-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image" id="start_hover"><img src="assets/img/START-BTN-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/tile.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1-start-button.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-3.png" width="1" height="1" alt="Preloaded Image"></div></div>');
+
+//IMAGE LOADER////////////////////////
+$('body').append('<div class="d-flex text-center loading-screen" id="loading-screen"><h1 class="font-size-h2 font-saira-semi-condensed color-tangerine">Loading Central Dispatch Touchscreen Experience...</h1><div class="loader">Loading...</div></div><div id="image-loader"><div id="preloader"><img src="assets/img/about-create-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-dashboard.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/about-manage-listings.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/add-user.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/blind-ratings-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-NAV-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/BTN-START-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CALLOUTS3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-app-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/carrier-verification-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-nada-touchscreen-background.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/cd-manheim-integration.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/Central_Dispatch_rgb_reverse.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/coming-soon-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/company-overview.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CORE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/CP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/dashboard-admin-panel.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/gold-list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-clock.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-exit.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-menu.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-minus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-plus.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-rotate.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x-gold.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-x.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/icon-zoom.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_01.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_02.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_03.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_04.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_05.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_06.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_07.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_08.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/list-item-core_09.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/log-into-CD.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-dispatches-modal.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-dispatches-page.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings--listing-1-actionbar.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings-listing-1-arrow.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings-listing-1-details.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings-listing-1-info.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings-listing-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings-listing-3.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings-page-header.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/manage-listings-page.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/mann-listing-int-modal-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/marketplace-intel-report-thumb-compressed.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/modal-market-intelligence.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/nav-arrow.svg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/ONE.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/poster.jpg" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG-EXP.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/PREMIUM-BG.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check-plus.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/price-check.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/pricecheck-thumbnail.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-dispatches.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/real-time-tracking-map.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/START-BTN-BLANK-HOVER.png" width="1" height="1" alt="Preloaded Image" id="start_hover"><img src="assets/img/START-BTN-BLANK.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/tile.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/user-management-thumb.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1-start-button.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-1.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-2.png" width="1" height="1" alt="Preloaded Image"><img src="assets/img/vehicle-inspections-phone-3.png" width="1" height="1" alt="Preloaded Image"></div></div>');
 
 $(window).on('load', function(){
   setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
@@ -16,6 +18,8 @@ function removeLoader(){
       $( "#image-loader" ).remove(); //leave for now
   	});
 }
+
+//SERVICE WORKERR////////////////////////
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
@@ -27,7 +31,7 @@ if ("serviceWorker" in navigator) {
 
 
 
-
+//FUNCTIONS////////////////////////
 function toggleFullScreen() {
   if (!document.fullscreenElement &&    // alternative standard method
       !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
@@ -60,31 +64,27 @@ function toggleFullScreen() {
   }
 }
 
-
-
-document.onselectstart = new Function("return true");
-
-
-
-//SETUP HAMMER JS
-
-var myElement = document.getElementById('app');
-var mc = new Hammer(myElement);
-
-
-
-
 function hideUI() {
     $('#video-bg')[0].pause(); 
  	$('#video-bg').addClass('blur');
- 	//set UI opacity to 0
- 	$('.app_footer').addClass('op-0');
- 	$('.img-overlay').addClass('op-0');
+ 	$('.app_footer').fadeOut();
+ 	$('.img-overlay').fadeOut();
  	$( '.section' ).each(function(index) {
 	   // check section is visible
         if($(this).is(":visible")){
-
-           	$(this).addClass('op-0');
+        	//$(this).fadeOut();
+           	$(this).removeClass('animate__fadeIn').addClass('animate__fadeOut hide-me');
+           	window.setTimeout(function(){
+				$(this).addClass('d-none');
+		 	},100);
+        } else{
+            //do nothing, its hidden
+        }
+	});
+	$( '.modal, .modal-backdrop' ).each(function(index) {
+	   // check section is visible
+        if($(this).is(":visible")){
+           	$(this).addClass('d-none hide-me');
         } else{
             //do nothing, its hidden
         }
@@ -94,13 +94,23 @@ function hideUI() {
 function showUI() {
     $('#video-bg')[0].play(); 
  	$('#video-bg').removeClass('blur');
- 	//set UI opacity to 0
- 	$('.app_footer').removeClass('op-0');
- 	$('.img-overlay').removeClass('op-0');
+ 	$('.app_footer').fadeIn();
+ 	$('.img-overlay').fadeIn();
  	$( '.section' ).each(function(index) {
 	   // check if section has opacity lowered
-        if($(this).hasClass("op-0")){
-           $(this).removeClass('op-0');
+        if($(this).hasClass("hide-me")){
+        	$(this).removeClass('hide-me animate__fadeOut').addClass('animate__fadeIn');
+           	window.setTimeout(function(){
+				$(this).removeClass('d-none');
+		 	},100);
+        } else{
+            //do nothing, its hidden
+        }
+	});
+	$( '.modal, .modal-backdrop' ).each(function(index) {
+	   // check section is visible
+        if($(this).hasClass("hide-me")){
+           	$(this).removeClass('d-none hide-me');
         } else{
             //do nothing, its hidden
         }
@@ -125,6 +135,21 @@ function checkWindow() {
 		$( '.rotate-msg-overlay' ).fadeOut();
 	}
 }
+
+
+document.onselectstart = new Function("return true");
+
+
+
+//SETUP HAMMER JS
+
+var myElement = document.getElementById('app');
+var mc = new Hammer(myElement);
+
+
+
+
+
 
 
 $(window).on('resize', function(){
@@ -163,126 +188,125 @@ $( document ).ready(function() {
 
 
 	var timer = '';
-
-	// If theres no activity for 30 (30000) seconds do something 
-	// temporarily set to 5 sec (5000)
-	var activityTimeout = setTimeout(inActive, 5000);
-
-
-
+	var delay = 600000;
+	var activityTimeout = setTimeout(inActive, delay);
 
 	//When timer screen 60 sec countdown reaches zero, reset everything and go back to start
 	function backtoStart(){
 		console.log('backtoStart() was executed.');
+		$(document).off('keyup keypress tap taphold click',checkActive);
+		$(document).on('keyup keypress tap taphold click',resetActive);	
 		clearTimeout(activityTimeout);
-	    activityTimeout = setTimeout(inActive, 5000);
-
-	    $(document).bind('keyup keypress tap taphold click', function(){ resetActive(); });
+	    activityTimeout = setTimeout(inActive, delay);
 
 	    $( '.section' ).each(function(index) {
 			// check section has opacity class
-			if($(this).hasClass("op-0")){
-				$(this).removeClass('op-0');
+			if($(this).hasClass("hide-me")){
+				//$(this).fadeIn();
+				$(this).removeClass('animate__fadeIn hide-me');
 			} else{
 				//do nothing, its hidden
 			}
 			// check for animate class
-			if($(this).hasClass("animate__fadeIn")){
-				$(this).removeClass('animate__fadeIn').addClass('animate__fadeOut');
-			} else{
-				//do nothing, its hidden
-			}
+			// if($(this).hasClass("animate__fadeIn")){
+			// 	$(this).removeClass('animate__fadeIn').addClass('animate__fadeOut');
+			// } else{
+			// 	//do nothing, its hidden
+			// }
 		});
+
 		$('.dark-overlay').fadeOut();
-		$('.img-overlay').removeClass('op-0');
+		$('.img-overlay').fadeIn();
 	    $('#video-bg')[0].play(); 
  		$('#video-bg').removeClass('blur'); 
  		//$('.section').addClass('d-none');
  		$('#start-screen').removeClass('d-none animate__fadeOut op-0').addClass('animate__fadeIn');
  		$('#footer-menu').addClass('d-none');
  		$('#footer-exit').addClass('d-none');
- 		window.setTimeout(function(){
-			$(this).addClass('d-none');
-	 	},500);
+ 		// window.setTimeout(function(){
+		// 	$(this).addClass('d-none');
+	 	// },500);
 	}
 
 	//Activity detected, reset activityTimeout, play video bg, remove blur, set UI elements back to opacity:1
 	function resetActive(){
 		console.log('resetActive() was executed.');
-
-
 	    $('#app-container').attr('class', 'app_container active');
-
-	    //reset activityTimeout
 	    clearTimeout(activityTimeout);
-	    activityTimeout = setTimeout(inActive, 5000);
-	    
-	    
-	    showUI();
-
-		//hide the timer screen
-		$( '.timer-overlay' ).fadeOut();
-
+	    activityTimeout = setTimeout(inActive, delay);
 		
+	}
+
+	function checkActive() {
+		console.log('checkActive() was executed.');
+		clearInterval(timer);
+		$(document).off('keyup keypress tap taphold click',checkActive);
+		$(document).on('keyup keypress tap taphold click',resetActive);	
 	}
 
 	// No activity detected.
 	function inActive(){
 		console.log('inActive() was executed.');
-
-		//not sure if this is working, 
-		$(document).unbind('keyup keypress tap taphold click', function(){
-			 
-			$("#exit-timer").click(function (e) {
-				e.preventDefault();
-				// clear activity timer
-				clearTimeout(activityTimeout);
-
-				//reset activity timeout
-				activityTimeout = setTimeout(inActive, 5000);
-
-				//clear countdown timer
-				clearInterval(timer);
-
-				//set timer text to 60
-				$('#timer-counter').text('60');
-
-			});
-		});
-	    //$(document.body).attr('class', 'app inactive');
-	    $('#app-container').attr('class', 'app_container inactive');
+		//unbind when inactive
+		$(document).off('keyup keypress tap taphold click',resetActive);
+    	$('#app-container').attr('class', 'app_container inactive');
 	   
 	    //hide UI elements
-	   	hideUI();
+   		hideUI();
 
 		//show the timer screen
 		$( '.timer-overlay' ).fadeIn();
 
 		//Start the clock
 		var sec = 60;
-		var timer = setInterval(function() {
+		timer = setInterval(function() {
 		    
 
-			$('#timer-counter').text(sec--);
+		$('#timer-counter').text(sec--);
 
-		    if (sec == -1) {
-		        //reset to start screen
-		        console.log('timer ran out.');
-		        clearInterval(timer);
-		        $('#timer-counter').text('60');
-		        $( '.timer-overlay' ).fadeOut();
-		        backtoStart();
-		    }
+	    if (sec == -1) {
+	        //reset to start screen
+	        console.log('timer ran out.');
+	        clearInterval(timer);
+	        $('#timer-counter').text('60');
+	        $( '.timer-overlay' ).fadeOut();
+	        backtoStart();
+	    }
+
+
+	    $("#exit-timer").click(function (e) {
+			e.preventDefault();
+			console.log('#exit-timer was clicked.');
+			clearInterval(timer);
+			$('#timer-counter').text('60');
+			$( '.timer-overlay' ).fadeOut();
+			showUI();
+			$(document).off('keyup keypress tap taphold click', checkActive );
+			$(document).on('keyup keypress tap taphold click', resetActive );
+			$( '.section' ).each(function(index) {
+			   // check if section has opacity lowered
+		        if($(this).hasClass("hide-me")){
+		        	$(this).removeClass('hide-me animate__fadeOut').addClass('animate__fadeIn');
+		           	window.setTimeout(function(){
+						$(this).removeClass('d-none');
+				 	},100);
+		        } else{
+		            //do nothing, its hidden
+		        }
+			});
+		});
+
 		}, 1000);
+
+		// $(document).off('keyup keypress tap taphold click',resetActive);
+		//$(document).on('keyup keypress tap taphold click',checkActive);
 
 	}
 
 
 
 	// Check for mousemove, could add other events here such as checking for key presses ect.
-	$(document).bind('keyup keypress tap taphold click', function(){
-		resetActive();
-	});
+	$(document).on('keyup keypress tap taphold click',resetActive);
 
 
 
@@ -593,17 +617,12 @@ $( document ).ready(function() {
 	        $(this).toggle( "fast", function() {}  );
 	    });
 	});
-	// $('.img-toggle').click(function() {
-	// 	//$( '#inner-modal-overlay' ).fadeIn( 500, function() {}  );
-	// 	$( this ).fadeOut( 500, function() {}  );
-	// 	$( '#drawer-img' ).fadeIn( 500, function() {}  );
-	// });
+
 	$( '.img-toggle' ).each(function(index) {
 	    $(this).on('click', function(e){
 	    	e.preventDefault();
 	    	var parentContext = $(this).parents('.modal-body');
 	        $( '.top-img',parentContext).toggleClass( "op-0" );
-	        //$( this ).find('.bottom-img').fadeToggle( 500, function() {}  );
 	    });
 	});
 
@@ -652,66 +671,7 @@ $( document ).ready(function() {
 		 	},200);
 	    });
 	});
-	// $('#drawer-img').click(function() {
-	// 	if ($('#inner-modal-overlay').hasClass("d-none")) {
-	// 		$('#inner-modal-overlay').toggleClass('d-none d-block');
-	// 		$('#inner-modal-overlay').toggleClass('animate__fadeIn animate__fadeOut');
-	// 	} else {
-	// 		$('#inner-modal-overlay').toggleClass('animate__fadeIn animate__fadeOut');
-	// 		window.setTimeout(function(){
-	// 		 	$('#inner-modal-overlay').addClass('d-none');
-	// 	 	},200);
-	// 	}
-	// 	if ($('.pc-hs-1').hasClass("d-none")) {
-	// 		$('.pc-hs-1').toggleClass('d-none d-block');
-	// 		$('.pc-hs-1').toggleClass('animate__fadeIn animate__fadeOut');
-	// 	} else {
-	// 		$('.pc-hs-1').toggleClass('animate__fadeIn animate__fadeOut');
-	// 		window.setTimeout(function(){
-	// 		 	$('.pc-hs-1').addClass('d-none');
-	// 	 	},200);
-	// 	}
-	// 	if ($('#drawer-img').hasClass("d-none")) {
-	// 		$('#drawer-img').toggleClass('d-none d-block');
-	// 		$('#drawer-img').toggleClass('animate__slideInRight animate__slideOutRight');
-	// 	} else {
-	// 		$('#drawer-img').toggleClass('animate__slideInRight animate__slideOutRight');
-	// 		window.setTimeout(function(){
-	// 		 	$('#drawer-img').addClass('d-none');
-	// 	 	},200);
-	// 	}
-	// });
 
-	// $('#inner-modal-overlay').click(function() {
-		
-	// 	if ($('#inner-modal-overlay').hasClass("d-none")) {
-	// 		$('#inner-modal-overlay').toggleClass('d-none d-block');
-	// 		$('#inner-modal-overlay').toggleClass('animate__fadeIn animate__fadeOut');
-	// 	} else {
-	// 		$('#inner-modal-overlay').toggleClass('animate__fadeIn animate__fadeOut');
-	// 		window.setTimeout(function(){
-	// 		 	$('#inner-modal-overlay').addClass('d-none');
-	// 	 	},200);
-	// 	}
-	// 	if ($('.pc-hs-1').hasClass("d-none")) {
-	// 		$('.pc-hs-1').toggleClass('d-none d-block');
-	// 		$('.pc-hs-1').toggleClass('animate__fadeIn animate__fadeOut');
-	// 	} else {
-	// 		$('.pc-hs-1').toggleClass('animate__fadeIn animate__fadeOut');
-	// 		window.setTimeout(function(){
-	// 		 	$('.pc-hs-1').addClass('d-none');
-	// 	 	},200);
-	// 	}
-	// 	if ($('#drawer-img').hasClass("d-none")) {
-	// 		$('#drawer-img').toggleClass('d-none d-block');
-	// 		$('#drawer-img').toggleClass('animate__slideInRight animate__slideOutRight');
-	// 	} else {
-	// 		$('#drawer-img').toggleClass('animate__slideInRight animate__slideOutRight');
-	// 		window.setTimeout(function(){
-	// 		 	$('#drawer-img').addClass('d-none');
-	// 	 	},200);
-	// 	}
-	// });
 
 	$('.menu_container #footer-menu').hover (function(){
 	  $(this).toggleClass('open');
