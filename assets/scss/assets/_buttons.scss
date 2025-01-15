@@ -7,7 +7,7 @@ button:focus:not(:focus-visible) {
 	max-width: 872px;
 	width: 100%;
 	height: auto;
-	padding: var(--cd-btn-padding);
+	padding: var(--cd-fluid-btn-padding-horz) var(--cd-fluid-btn-padding-horz);
 	background-image: url(../img/BTN-NAV-BLANK.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -17,7 +17,7 @@ button:focus:not(:focus-visible) {
 	align-items: center;
 	color: var(--cd-color-white);
 	font-family: var(--cd-font-family-roboto);
-	font-size: var(--cd-font-size-btn);
+	font-size: var(--cd-fluid-font-size-btn);
 	font-style: normal;
 	font-weight: 700;
 	line-height: 42.61px; /* 106.525% */
@@ -76,7 +76,7 @@ button:focus:not(:focus-visible) {
 		position: absolute;
 		right: -21.539px;
 		top: -28.657px;
-		font-size: var(--cd-font-size-lg);
+		font-size: var(--cd-fluid-font-size-tag);
 		background: var(--cd-color-tangerine);
 		color: var(--cd-color-blacktop);
 		display: flex;
@@ -98,7 +98,7 @@ button:focus:not(:focus-visible) {
 	max-width: 805px;
 	width: 100%;
 	height: auto;
-	padding: var(--cd-start-btn-padding);
+	padding: var(--cd-fluid-start-btn-padding);
 	background-image: url(../img/START-BTN-BLANK.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -108,7 +108,7 @@ button:focus:not(:focus-visible) {
 	align-items: center;
 	color: var(--cd-color-blacktop);
 	font-family: var(--cd-font-family-roboto);
-	font-size: var(--cd-font-size-btn);
+	font-size: var(--cd-fluid-font-size-start-btn);
 	font-style: normal;
 	font-weight: 700;
 	line-height: 42.61px; /* 106.525% */
@@ -189,7 +189,7 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	right: -21.539px;
 	top: -28.657px;
-	font-size: var(--cd-font-size-lg);
+	font-size: var(--cd-fluid-font-size-btn);
 	background: var(--cd-color-tangerine);
 	color: var(--cd-color-blacktop);
 	display: flex;

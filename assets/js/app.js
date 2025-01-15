@@ -172,7 +172,6 @@ $( document ).ready(function() {
 			} else{
 				//do nothing, its hidden
 			}
-
 		});
 
 		$('.dark-overlay').fadeOut();
@@ -216,37 +215,28 @@ $( document ).ready(function() {
 		//Start the clock
 		var sec = 60;
 		timer = setInterval(function() {
-		    
-
-		$('#timer-counter').text(sec--);
-
-	    if (sec == -1) {
-	        //reset to start screen
-	        console.log('timer ran out.');
-	        clearInterval(timer);
-	        $('#timer-counter').text('60');
-	        $( '.timer-overlay' ).fadeOut();
-	        backtoStart();
-	    }
-
-
-	    $("#exit-timer").click(function (e) {
-			e.preventDefault();
-			console.log('#exit-timer was clicked.');
-			clearInterval(timer);
-			$('#timer-counter').text('60');
-			$( '.timer-overlay' ).fadeOut();
-			showUI();
-			$(document).off('keyup keypress tap taphold click', checkActive );
-			$(document).on('keyup keypress tap taphold click', resetActive );
-			$('#footer-exit').fadeIn();
-		});
+			$('#timer-counter').text(sec--);
+		    if (sec == -1) {
+		        //reset to start screen
+		        console.log('timer ran out.');
+		        clearInterval(timer);
+		        $('#timer-counter').text('60');
+		        $( '.timer-overlay' ).fadeOut();
+		        backtoStart();
+		    }
+		    $("#exit-timer").click(function (e) {
+				e.preventDefault();
+				console.log('#exit-timer was clicked.');
+				clearInterval(timer);
+				$('#timer-counter').text('60');
+				$( '.timer-overlay' ).fadeOut();
+				showUI();
+				$(document).off('keyup keypress tap taphold click', checkActive );
+				$(document).on('keyup keypress tap taphold click', resetActive );
+				$('#footer-exit').fadeIn();
+			});
 
 		}, 1000);
-
-		// $(document).off('keyup keypress tap taphold click',resetActive);
-		//$(document).on('keyup keypress tap taphold click',checkActive);
-
 	}
 
 

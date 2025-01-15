@@ -16,20 +16,32 @@ body{
 	.font-size-h1, h1{
 		letter-spacing: var(--cd-font-letter-spacing-h1);
 		font-size: var(--cd-font-size-h1);
+		min-height: 0vw;
 	}
 	.font-size-h2, h2{
 		font-size: var(--cd-font-size-h2);
+		min-height: 0vw;
 	}
 	.font-size-h3, h3{
 		font-size: var(--cd-font-size-h3);
+		min-height: 0vw;
 	}
 	.font-size-p-large, p.large{
 		font-size: var(--cd-font-size-p-large);
+		min-height: 0vw;
 	}
 	.font-size-p, p{
 		font-size: var(--cd-font-size-p);
+		min-height: 0vw;
 	}
-
+	.font-size-p-small, p.small{
+		font-size: var(--cd-font-size-p-small);
+		min-height: 0vw;
+	}
+	.font-size-p-xsmall, p.xsmall{
+		font-size: var(--cd-font-size-p-xsmall);
+		min-height: 0vw;
+	}
 	.app{
 		background: var(--cd-color-blacktop);
 		display: flex;
@@ -68,7 +80,7 @@ body{
 		color: #FFF;
 		text-align: center;
 		font-family:  var(--cd-font-family-saira);
-		font-size: var(--cd-font-size-title);
+		font-size: var(--cd-fluid-font-size-title);
 		font-style: normal;
 		font-weight: 700;
 		line-height: 90%;
@@ -303,7 +315,7 @@ nav{
 			border-bottom: 1px solid rgba(255, 255, 255, 0.30);
 		}
 		.ul-title{
-			font-size: 38px;
+			font-size: var(--cd-font-size-h4);
 			font-style: normal;
 			font-weight: 700;
 			line-height: 120%; /* 45.6px */
@@ -613,6 +625,9 @@ footer{
 }
 .logo_container {
     text-align: center;
+    .cd_logo{
+    	width: var(--cd-fluid-logo-width);
+    }
 }
 
 
@@ -685,7 +700,7 @@ footer{
 	flex-direction: row;
 	gap: 40px;
 	.fl_item_heading{
-		font-size: var(--cd-font-size-li-heading);
+		font-size: var(--cd-fluid-font-size-h2);
 		font-style: normal;
 		font-weight: 700;
 		line-height: 100%;
@@ -810,7 +825,7 @@ footer{
 			leading-trim: both;
 			text-edge: cap;
 			font-family: var(--cd-font-family-saira);
-			font-size: var(--cd-font-size-xs);
+			font-size: clamp(18px, calc(1.125rem + ((1vw - 7px) * 0.7143)), 28px);
 			font-style: normal;
 			font-weight: 700;
 			line-height: 100%; /* 28px */
