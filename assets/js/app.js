@@ -65,26 +65,13 @@ function toggleFullScreen() {
 }
 
 function hideUI() {
-    $('#video-bg')[0].pause(); 
- 	$('#video-bg').addClass('blur');
+    pauseBlur();
  	$('.app_footer').fadeOut();
  	$('.img-overlay').fadeOut();
- 	$( '.section' ).each(function(index) {
+ 	$( '.section, #footer-exit, #footer-menu, .modal, .modal-backdrop' ).each(function(index) {
 	   // check section is visible
         if($(this).is(":visible")){
-        	//$(this).fadeOut();
-           	$(this).removeClass('animate__fadeIn').addClass('animate__fadeOut hide-me');
-           	window.setTimeout(function(){
-				$(this).addClass('d-none');
-		 	},100);
-        } else{
-            //do nothing, its hidden
-        }
-	});
-	$( '.modal, .modal-backdrop' ).each(function(index) {
-	   // check section is visible
-        if($(this).is(":visible")){
-           	$(this).addClass('d-none hide-me');
+           	$(this).fadeOut().addClass('hide-me');
         } else{
             //do nothing, its hidden
         }
@@ -92,25 +79,13 @@ function hideUI() {
 }
 
 function showUI() {
-    $('#video-bg')[0].play(); 
- 	$('#video-bg').removeClass('blur');
+    playUnblur();
  	$('.app_footer').fadeIn();
  	$('.img-overlay').fadeIn();
- 	$( '.section' ).each(function(index) {
+ 	$( '.section, #footer-exit, #footer-menu, .modal, .modal-backdrop' ).each(function(index) {
 	   // check if section has opacity lowered
         if($(this).hasClass("hide-me")){
-        	$(this).removeClass('hide-me animate__fadeOut').addClass('animate__fadeIn');
-           	window.setTimeout(function(){
-				$(this).removeClass('d-none');
-		 	},100);
-        } else{
-            //do nothing, its hidden
-        }
-	});
-	$( '.modal, .modal-backdrop' ).each(function(index) {
-	   // check section is visible
-        if($(this).hasClass("hide-me")){
-           	$(this).removeClass('d-none hide-me');
+        	$(this).fadeIn().removeClass('hide-me');
         } else{
             //do nothing, its hidden
         }
@@ -120,23 +95,36 @@ function showUI() {
 function checkWindow() {
     //check for landscpe or portrait
 	if ($(window).width() > $(window).height()) {
-	
-	console.warn("Alert - Viewport is in Landscape Mode.");
-
-	hideUI();
-
-	//show the rotate device screen
-	$( '.rotate-msg-overlay' ).fadeIn();
-
+		console.warn("Alert - Viewport is in Landscape Mode.");
+		hideUI();
+		//show the rotate device screen
+		$( '.rotate-msg-overlay' ).fadeIn();
 	} else {
-
 		console.log("Portrait mode"); 
 		showUI();
 		$( '.rotate-msg-overlay' ).fadeOut();
 	}
 }
 
+ //Video
+let vid = document.getElementById("video_bg");
 
+function playVid() {
+    vid.play();
+}
+
+function pauseVid() {
+    vid.pause();
+}
+
+function pauseBlur() {
+	$('#video-bg')[0].pause(); 
+	$('#video-bg').addClass('blur');
+}
+function playUnblur(){
+	$('#video-bg')[0].play(); 
+	$('#video-bg').removeClass('blur');
+}
 document.onselectstart = new Function("return true");
 
 
@@ -166,27 +154,6 @@ $( document ).ready(function() {
     
 
 
-
-
-    
-
-
-
-
-
-    //Video
-	let vid = document.getElementById("video_bg");
-
-	function playVid() {
-	    vid.play();
-	}
-
-	function pauseVid() {
-	    vid.pause();
-	}
-
-
-
 	var timer = '';
 	var delay = 600000;
 	var activityTimeout = setTimeout(inActive, delay);
@@ -200,32 +167,21 @@ $( document ).ready(function() {
 	    activityTimeout = setTimeout(inActive, delay);
 
 	    $( '.section' ).each(function(index) {
-			// check section has opacity class
 			if($(this).hasClass("hide-me")){
-				//$(this).fadeIn();
-				$(this).removeClass('animate__fadeIn hide-me');
+				$(this).removeClass('hide-me');
 			} else{
 				//do nothing, its hidden
 			}
-			// check for animate class
-			// if($(this).hasClass("animate__fadeIn")){
-			// 	$(this).removeClass('animate__fadeIn').addClass('animate__fadeOut');
-			// } else{
-			// 	//do nothing, its hidden
-			// }
+
 		});
 
 		$('.dark-overlay').fadeOut();
 		$('.img-overlay').fadeIn();
-	    $('#video-bg')[0].play(); 
- 		$('#video-bg').removeClass('blur'); 
- 		//$('.section').addClass('d-none');
- 		$('#start-screen').removeClass('d-none animate__fadeOut op-0').addClass('animate__fadeIn');
- 		$('#footer-menu').addClass('d-none');
- 		$('#footer-exit').addClass('d-none');
- 		// window.setTimeout(function(){
-		// 	$(this).addClass('d-none');
-	 	// },500);
+	    playUnblur()
+ 		$('#start-screen').fadeIn();
+ 		$('#footer-menu').fadeOut();
+ 		$('#footer-exit').fadeOut();
+
 	}
 
 	//Activity detected, reset activityTimeout, play video bg, remove blur, set UI elements back to opacity:1
@@ -283,17 +239,7 @@ $( document ).ready(function() {
 			showUI();
 			$(document).off('keyup keypress tap taphold click', checkActive );
 			$(document).on('keyup keypress tap taphold click', resetActive );
-			$( '.section' ).each(function(index) {
-			   // check if section has opacity lowered
-		        if($(this).hasClass("hide-me")){
-		        	$(this).removeClass('hide-me animate__fadeOut').addClass('animate__fadeIn');
-		           	window.setTimeout(function(){
-						$(this).removeClass('d-none');
-				 	},100);
-		        } else{
-		            //do nothing, its hidden
-		        }
-			});
+			$('#footer-exit').fadeIn();
 		});
 
 		}, 1000);
@@ -338,204 +284,161 @@ $( document ).ready(function() {
 		} else {
 			toggleFullScreen();
 		}
-		window.setTimeout(function(){
-		 	$('#start-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-		 	$('.dark-overlay').fadeIn();
-	 	},100);
-	 	window.setTimeout(function(){
-	 		$('#menu-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#start-screen').addClass('d-none');
-		 	$('#footer-exit').removeClass('d-none');
-	 	},500);
+		$('#start-screen').fadeOut();
+		$('.dark-overlay').fadeIn();
+		$('#menu-screen').fadeIn();
+		$('#footer-exit').fadeIn();
 	});
 	//Menu Clicks
 	$('#manheim-listing-integration').click(function() {
-		//e.preventDefault();
 		console.log( "manheim-listing-integration btn clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#manheim-listing-integration-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#manheim-listing-integration-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 	$('#tailored-plans').click(function() {
 		console.log( "tailored-plans-screen btn clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#tailored-plans-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#tailored-plans-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 	$('#market-intelligence').click(function() {
-		// e.preventDefault();
 		console.log( "market-intelligence btn clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#market-intelligence-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#market-intelligence-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 	$('#carrier-app').click(function() {
 		console.log( "carrier-app btn clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#carrier-app-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#carrier-app-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 	$('#marketplace-apis').click(function() {
-		
 		console.log( "marketplace-apis btn clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#marketplace-apis-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#marketplace-apis-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 	$('#marketplace-integrity').click(function() {
 		console.log( "marketplace-integrity btn clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#marketplace-integrity-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#marketplace-integrity-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 	$('#about-the-marketplace').click(function() {
-		
 		console.log( "about-the-marketplace btn clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#about-the-marketplace-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#about-the-marketplace-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 	$('#see-whats-coming').click(function(e) {
 		e.preventDefault();
-		// UNCOMMENT WHEN PAGE IS BUILT
 		console.log( "see-whats-coming link clicked!" );
-		window.setTimeout(function(){
-		 	$('#menu-screen').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
+		$('#menu-screen').fadeOut();
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].pause(); 
-	 		$('#video-bg').addClass('blur');
-	 		$('#see-whats-coming-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 	$('#menu-screen').addClass('d-none');
-		 	$('#footer-menu').removeClass('d-none');
+	 		pauseBlur();
+	 		$('#see-whats-coming-screen').fadeIn();
+		 	$('#footer-menu').fadeIn();
 	 	},500);
 	});
 
-	$( '.close-screen' ).each(function(index) {
-	    $(this).on('click', function(e){
-	    	e.preventDefault();
-	        // panel to show
-	        var parentContext = $(this).parents('.section');
+	// $( '.close-screen' ).each(function(index) {
+	//     $(this).on('click', function(e){
+	//     	e.preventDefault();
+	//         // panel to show
+	//         var parentContext = $(this).parents('.section');
 	        
-	        //animate entrance/exit
-		    $('.section', parentContext).removeClass('animate__fadeIn').addClass('animate__fadeOut');
-		    $('.modal_frame',parentContext).removeClass('off_stage animate__fadeOutDownBig').addClass('animate__fadeInUp');
+	//         //animate entrance/exit
+	// 	    $('.section', parentContext).removeClass('animate__fadeIn').addClass('animate__fadeOut');
+	// 	    $('.modal_frame',parentContext).removeClass('off_stage animate__fadeOutDownBig').addClass('animate__fadeInUp');
 		    
-		    setTimeout(function() {  
-		        $('.section', parentContext).addClass('d-none');
-		        $('#video-bg')[0].play(); 
-		 		$('#video-bg').removeClass('blur');
-		 		$('#menu-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-		 		$('#footer-menu').addClass('d-none');
+	// 	    setTimeout(function() {  
+	// 	        $('.section', parentContext).addClass('d-none');
+	// 	        $('#video-bg')[0].play(); 
+	// 	 		$('#video-bg').removeClass('blur');
+	// 	 		$('#menu-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
+	// 	 		$('#footer-menu').addClass('d-none');
+	// 	    }, 200);
+	//     });
+	// });
+	// x-btn
+	$( '.x-btn' ).each(function(index) {
+	    $(this).on('click', function(e){
+	        e.preventDefault();
+	       $( '.section' ).each(function(index) {
+			   // check section is visible
+		        if($(this).is(":visible")){
+		           	$(this).fadeOut();
+		           	
+		        }
+			});
+			setTimeout(function() {
+		    	playUnblur();
+		 		$('#menu-screen').fadeIn();
+		 		$('#footer-exit').fadeIn();
+		 		$('#footer-menu').fadeOut();
 		    }, 200);
 	    });
 	});
-// x-btn
-	$('.x-btn').click(function() {
-		window.setTimeout(function(){
-		 	$('.section').removeClass('animate__fadeIn').addClass('animate__fadeOut');
-	 	},100);
-	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].play(); 
-	 		$('#video-bg').removeClass('blur'); 
-	 		$('.section').addClass('d-none');
-	 		$('#menu-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-	 		$('#footer-menu').addClass('d-none');
-	 	},500);
-	});
+
 	$('#footer-exit').click(function() {
 		window.setTimeout(function(){
-		 	$('.section').removeClass('animate__fadeIn').addClass('animate__fadeOut');
+		 	$( '.section' ).each(function(index) {
+			   // check section is visible
+		        if($(this).is(":visible")){
+		           	$(this).fadeOut();
+		        }
+			});
 		 	$('.dark-overlay').fadeOut();
 	 	},100);
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].play(); 
-	 		$('#video-bg').removeClass('blur'); 
-	 		$('.section').addClass('d-none');
-	 		$('#start-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-	 		$('#footer-menu').addClass('d-none');
-	 		$('#footer-exit').addClass('d-none');
+	 		playUnblur();
+	 		$('#start-screen').fadeIn();
+	 		$('#footer-menu').fadeOut();
+	 		$('#footer-exit').fadeOut();
 	 	},500);
 	});
 	$('#footer-menu').click(function() {
+		$('#footer-menu').fadeOut();
 		window.setTimeout(function(){
-		 	$('.section').removeClass('animate__fadeIn').addClass('animate__fadeOut');
+		 	$( '.section' ).each(function(index) {
+			   if($(this).is(":visible")){
+		           	$(this).fadeOut();
+		        }
+			});
 	 	},100);
 	 	window.setTimeout(function(){
-	 		$('#video-bg')[0].play(); 
-	 		$('#video-bg').removeClass('blur'); 
-	 		$('.section').addClass('d-none');
-	 		$('#menu-screen').removeClass('d-none animate__fadeOut').addClass('animate__fadeIn');
-	 		$('#footer-menu').addClass('d-none');
-	 	},500);
+	 		playUnblur();
+	 		$('#menu-screen').fadeIn();
+	 	},200);
 	});
 
 	$('#feature_toggle').click(function() {
 		$('#plans').toggleClass('feature_open');
 	});
 
-
-	// $('#inner-modal-overlay, #drawer-img').click(function() {
-	// 	$( '#inner-modal-overlay' ).fadeOut( 500, function() {}  );
-	// 	$( '.pc-hs-1' ).fadeIn( 500, function() {}  );
-	// 	// $( '#drawer-img' ).fadeOut( 500, function() {}  );
-	// 	$( '#drawer-img' ).removeClass('animate__slideInRight').addClass('animate__slideOutRight').toggleClass('d-block d-none');
-	// });
-	// $('#drawer-trigger').click(function() {
-	// 	$( '#inner-modal-overlay' ).fadeIn( 500, function() {}  );
-	// 	$( '.pc-hs-1' ).fadeOut( 500, function() {}  );
-	// 	// $( '#drawer-img' ).fadeIn( 500, function() {}  );
-	// 	$( '#drawer-img' ).removeClass('animate__slideOutRight').addClass('animate__slideInRight').toggleClass('d-block d-none');
-	// });
 	$( '.drawer-trigger' ).each(function(index) {
 	    $(this).on('click', function(e){
 	    	e.preventDefault();
