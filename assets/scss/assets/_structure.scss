@@ -74,7 +74,10 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 100px;
+	gap: 20px;
+	@media screen and (min-width: 700px) {
+		gap: clamp(20px, calc(1.25rem + ((1vw - 7px) * 5.7143)), 100px);
+	}
 	width: 100%;
 	.start_screen_title{
 		color: #FFF;
@@ -121,22 +124,10 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    bottom: 280px;
+    bottom: var(--cd-screen-split);
 
     @media screen and (min-width: 2000px) {
-		z-index: 6;
-		display: flex;
-		align-content: center;
-		flex: 1;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		width: 100%;
-		position: absolute;
-		top: 22.5%;
-		left: 0;
-		right: 0;
-		bottom: 280px;
+		top: 22.5%;		
 	}
 
     .screen_container{
@@ -448,7 +439,10 @@ footer{
 	align-content: center;
 	justify-content: space-between;
 	z-index: 15;
-	height: 280px;
+	height: auto;
+	@media screen and (min-width: 700px) {
+		height: var(--cd-screen-split);
+	}
 	padding: 0 60px 60px;
 	flex: 0 1 280px;
 	position: absolute;

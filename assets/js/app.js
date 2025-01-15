@@ -92,18 +92,37 @@ function showUI() {
 	});
 }
 
+
+
+
 function checkWindow() {
     //check for landscpe or portrait
-	if ($(window).width() > $(window).height()) {
+	var minScreenWidth = 700;
+	var screenWidth = $(window).width();
+	var screenHeight = $(window).height();
+	var aspectRatio = screenHeight / screenWidth;
+	var screenMode = '';
+	if (screenWidth > screenHeight) {
 		console.warn("Alert - Viewport is in Landscape Mode.");
+		var screenMode = 'landscape';
 		hideUI();
 		//show the rotate device screen
 		$( '.rotate-msg-overlay' ).fadeIn();
 	} else {
-		console.log("Portrait mode"); 
+		console.log("Alert - Viewport is in Portrait Mode."); 
+		var screenMode = 'portrait';
 		showUI();
 		$( '.rotate-msg-overlay' ).fadeOut();
 	}
+
+  // if (aspectRatio < 9 / 16 ) {
+  //   // Do something if the aspect ratio is less than 16:9
+  //   console.log("Aspect ratio is less than 9:16");
+  // } else {
+  //   // Do something else if the aspect ratio is 16:9 or greater
+  //   console.log("Aspect ratio is 9:16 or greater");
+  // }
+
 }
 
  //Video
@@ -135,14 +154,9 @@ var myElement = document.getElementById('app');
 var mc = new Hammer(myElement);
 
 
-
-
-
-
-
 $(window).on('resize', function(){
     checkWindow();
-});
+}).trigger('resize');
 
 
 /////////////////////////////////////////////////////////
@@ -151,7 +165,7 @@ $(window).on('resize', function(){
 
 $( document ).ready(function() {
     console.log( "ready!" );
-    
+    checkWindow();
 
 
 	var timer = '';

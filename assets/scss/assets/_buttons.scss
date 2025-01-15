@@ -96,7 +96,10 @@ button:focus:not(:focus-visible) {
 
 .start-btn{
 	max-width: 805px;
-	width: 100%;
+	width: auto;
+	@media screen and (min-width: 2000px) {
+		width: 100%;
+	}
 	height: auto;
 	padding: var(--cd-fluid-start-btn-padding);
 	background-image: url(../img/START-BTN-BLANK.png);
