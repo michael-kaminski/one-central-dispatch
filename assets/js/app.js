@@ -96,24 +96,36 @@ function showUI() {
 
 
 function checkWindow() {
-    //check for landscpe or portrait
-	var minScreenWidth = 700;
+    //check for landscpe or portrait, restrict to ipad mini
+	var minScreenWidth = 744;
 	var screenWidth = $(window).width();
 	var screenHeight = $(window).height();
 	var aspectRatio = screenHeight / screenWidth;
 	var screenMode = '';
-	if (screenWidth > screenHeight) {
-		console.warn("Alert - Viewport is in Landscape Mode.");
-		var screenMode = 'landscape';
+	if (screenWidth < minScreenWidth ) {
+		console.warn("Alert - App not formatted for this device.");
+		var screenMode = 'unsupported';
 		hideUI();
 		//show the rotate device screen
-		$( '.rotate-msg-overlay' ).fadeIn();
+		$( '.min-size-msg-overlay' ).fadeIn();
 	} else {
-		console.log("Alert - Viewport is in Portrait Mode."); 
-		var screenMode = 'portrait';
-		showUI();
-		$( '.rotate-msg-overlay' ).fadeOut();
+		$( '.min-size-msg-overlay' ).fadeOut();
+		if (screenWidth > screenHeight) {
+			console.warn("Alert - Viewport is in Landscape Mode.");
+			var screenMode = 'landscape';
+			hideUI();
+			//show the rotate device screen
+			$( '.rotate-msg-overlay' ).fadeIn();
+		} else {
+			console.log("Alert - Viewport is in Portrait Mode."); 
+			var screenMode = 'portrait';
+			showUI();
+			$( '.rotate-msg-overlay' ).fadeOut();
+		}
+
 	}
+
+	
 
   // if (aspectRatio < 9 / 16 ) {
   //   // Do something if the aspect ratio is less than 16:9
@@ -170,6 +182,8 @@ $( document ).ready(function() {
 
 	var timer = '';
 	var delay = 600000;
+	//uncomment to test
+	//var delay = 5000;
 	var activityTimeout = setTimeout(inActive, delay);
 
 	//When timer screen 60 sec countdown reaches zero, reset everything and go back to start
@@ -192,6 +206,7 @@ $( document ).ready(function() {
 		$('.img-overlay').fadeIn();
 	    playUnblur()
  		$('#start-screen').fadeIn();
+ 		$('.app_footer').fadeIn();
  		$('#footer-menu').fadeOut();
  		$('#footer-exit').fadeOut();
 
@@ -215,42 +230,49 @@ $( document ).ready(function() {
 
 	// No activity detected.
 	function inActive(){
-		console.log('inActive() was executed.');
-		//unbind when inactive
-		$(document).off('keyup keypress tap taphold click',resetActive);
-    	$('#app-container').attr('class', 'app_container inactive');
-	   
-	    //hide UI elements
-   		hideUI();
+	   	// check if start-screen is visible
+        if($('#start-screen').is(":visible")){
+            //do nothing, but reset timer
+            console.log('Start Screen - Standby Mode.');
+        	resetActive();
+        } else {
+            //unbind when inactive
+			$(document).off('keyup keypress tap taphold click',resetActive);
+			//add inactive class
+	    	$('#app-container').attr('class', 'app_container inactive');
+		    //hide UI elements
+	   		hideUI();
+			//show the timer screen
+			$( '.timer-overlay' ).fadeIn();
+			//Start the clock
+			var sec = 60;
+			timer = setInterval(function() {
+				$('#timer-counter').text(sec--);
+			    if (sec == -1) {
+			        //reset to start screen
+			        console.log('timer ran out.');
+			        clearInterval(timer);
+			        $('#timer-counter').text('60');
+			        $( '.timer-overlay' ).fadeOut();
+			        backtoStart();
+			        $('#footer-menu').fadeOut();
+ 					z$('#footer-exit').fadeOut();
+			    }
+			    $("#exit-timer").click(function (e) {
+					e.preventDefault();
+					console.log('#exit-timer was clicked.');
+					clearInterval(timer);
+					$('#timer-counter').text('60');
+					$( '.timer-overlay' ).fadeOut();
+					showUI();
+					$(document).off('keyup keypress tap taphold click', checkActive );
+					$(document).on('keyup keypress tap taphold click', resetActive );
+					$('#footer-exit').fadeIn();
+					$('.modal').modal('hide');
+				});
 
-		//show the timer screen
-		$( '.timer-overlay' ).fadeIn();
-
-		//Start the clock
-		var sec = 60;
-		timer = setInterval(function() {
-			$('#timer-counter').text(sec--);
-		    if (sec == -1) {
-		        //reset to start screen
-		        console.log('timer ran out.');
-		        clearInterval(timer);
-		        $('#timer-counter').text('60');
-		        $( '.timer-overlay' ).fadeOut();
-		        backtoStart();
-		    }
-		    $("#exit-timer").click(function (e) {
-				e.preventDefault();
-				console.log('#exit-timer was clicked.');
-				clearInterval(timer);
-				$('#timer-counter').text('60');
-				$( '.timer-overlay' ).fadeOut();
-				showUI();
-				$(document).off('keyup keypress tap taphold click', checkActive );
-				$(document).on('keyup keypress tap taphold click', resetActive );
-				$('#footer-exit').fadeIn();
-			});
-
-		}, 1000);
+			}, 1000);
+        }
 	}
 
 
@@ -272,6 +294,14 @@ $( document ).ready(function() {
 		if (previousFocus) {
 			previousFocus.focus();
 		}
+		$( '.x-btn' ).each(function(index) {
+	    	$(this).toggleClass('op-0');
+		});
+	});
+	$('.modal').on('show.bs.modal', function (e) {
+		$( '.x-btn' ).each(function(index) {
+	    	$(this).toggleClass('op-0');
+		});
 	});
 
 	//Hover Start button
@@ -284,7 +314,7 @@ $( document ).ready(function() {
 		console.log( "start btn clicked!" );
 		//check for fullscreen
 		if ($('body').hasClass('full_screen')) {
-			//do nothing
+			//do fvznothing
 		} else {
 			toggleFullScreen();
 		}
@@ -468,21 +498,18 @@ $( document ).ready(function() {
 	        $( '.map-overlay',parentContext ).fadeIn( 500, function() {}  );
 			$( '.pc-hs-1',parentContext ).fadeOut( 500, function() {}  );
 			$( '.map-img',parentContext ).removeClass('animate__slideOutDown').addClass('animate__slideInUp').toggleClass('d-block d-none');
-			// window.setTimeout(function(){
-		 	// 	$( '.map-img',parentContext ).toggleClass('d-block d-none');
-		 	// },500);
+
 	    });
 	});
 	$( '.map-overlay, .map-img' ).each(function(index) {
 	    $(this).on('click', function(e){
 	    	e.preventDefault();
 	    	var parentContext = $(this).parents('.modal-body');
+	    	$( '.map-img',parentContext ).removeClass('animate__slideInUp').addClass('animate__slideOutDown').toggleClass('d-block d-none');
 	        $( '.map-overlay',parentContext ).fadeOut( 500, function() {}  );
 			$( '.pc-hs-1',parentContext ).fadeIn( 500, function() {}  );
-			$( '.map-img',parentContext ).removeClass('animate__slideInUp').addClass('animate__slideOutDown').toggleClass('d-block d-none');
-			// window.setTimeout(function(){
-		 	// 	$( '.map-img',parentContext ).toggleClass('d-block d-none');
-		 	// },500);
+			
+
 	    });
 	});
 
@@ -492,10 +519,7 @@ $( document ).ready(function() {
 	    	var parentContext = $(this).parents('.modal-body');
 	        $( '.listing-overlay',parentContext ).fadeIn( 500, function() {}  );
 			$( '.hs-5',parentContext ).fadeOut( 500, function() {}  );
-			$( '.listing-img',parentContext ).removeClass('animate__slideOutDown').addClass('animate__slideInUp').toggleClass('d-block d-none');
-			// window.setTimeout(function(){
-		 	// 	$( '.listing-img',parentContext ).toggleClass('d-block d-none');
-		 	// },500);
+			$( '.listing-img',parentContext ).removeClass('d-none animate__fadeOutDownBig').addClass('animate__slideInUp');
 	    });
 	});
 	$( '.listing-overlay, .listing-img' ).each(function(index) {
@@ -504,10 +528,11 @@ $( document ).ready(function() {
 	    	var parentContext = $(this).parents('.modal-body');
 	        $( '.listing-overlay',parentContext ).fadeOut( 500, function() {}  );
 			$( '.hs-5',parentContext ).fadeIn( 500, function() {}  );
-			$( '.listing-img',parentContext ).removeClass('animate__slideInUp').addClass('animate__slideOutDown').toggleClass('d-block d-none');
-			// window.setTimeout(function(){
-		 	// 	$( '.map-img',parentContext ).toggleClass('d-block d-none');
-		 	// },500);
+			$( '.listing-img',parentContext ).removeClass('animate__slideInUp').addClass('animate__fadeOutDownBig');
+
+			window.setTimeout(function(){
+			 	$( '.listing-img',parentContext ).addClass('d-none');
+		 	},250);
 	    });
 	});
 	$( '.blind-ratings-modal-1' ).each(function(index) {
@@ -530,6 +555,16 @@ $( document ).ready(function() {
 	    	e.preventDefault();
 	    	var parentContext = $(this).parents('.modal-body');
 	        $( '.top-img',parentContext).toggleClass( "op-0" );
+	        $( '.hotspot',parentContext).toggleClass( "op-0" );
+	    });
+	});
+
+	$( '.toggle-me' ).each(function(index) {
+	    $(this).on('click', function(e){
+	    	e.preventDefault();
+	    	var parentContext = $(this).parents('.modal-body');
+	    	$('.top-img',parentContext).toggle();
+	    	$('.hotspot',parentContext).toggle();
 	    });
 	});
 
@@ -542,6 +577,7 @@ $( document ).ready(function() {
 	        $( '.phone-start-button',parentContext ).removeClass('op-1').addClass('op-0');
 	        $( '.phone-img-2',parentContext ).removeClass('d-none op-0').addClass('op-1');
 	        $( '.hs-4',parentContext ).removeClass('d-none op-0').addClass('op-1');
+	        $( '.hs-start-btn').fadeOut();
 	        window.setTimeout(function(){
 	        	$( '.phone-img-1',parentContext ).addClass('d-none');
 	        	$( '.phone-start-button',parentContext ).addClass('d-none');
@@ -567,6 +603,7 @@ $( document ).ready(function() {
 	    $(this).on('click', function(e){
 	    	e.preventDefault();
 	    	var parentContext = $(this).parents('.modal-body');
+	    	$( '.hs-start-btn').fadeIn();
 	    	$( '.phone-img-3',parentContext ).removeClass('op-1').addClass('op-0');
 	        $( '.phone-img-1',parentContext ).removeClass('d-none op-0').addClass('op-1 ');
 	        $( '.phone-start-button',parentContext ).removeClass('op-0').addClass('op-1');

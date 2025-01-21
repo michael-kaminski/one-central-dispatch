@@ -49,24 +49,92 @@
 	--cd-font-size-btn: 18px;
 	--cd-btn-padding: 20px 30px;
 	--cd-container-padding: 30px 50px;
+
+
+	--cd-fluid-font-size-msg-title: clamp(32px, calc(2rem + ((1vw - 7px) * 3.5714)), 82px);;
+		--cd-fluid-font-size-msg-text: clamp(16px, calc(1rem + ((1vw - 7px) * 1.1429)), 32px);
+
+--cd-fluid-msg-screen-gap:clamp(12px, calc(0.75rem + ((1vw - 7px) * 2.7143)), 50px);
+		--cd-fluid-svg-icon-width: clamp(90px, calc(5.625rem + ((1vw - 7px) * 4.2857)), 150px);
+		--cd-fluid-font-size-msg-link: clamp(18px, calc(1.125rem + ((1vw - 7px) * 0.4286)), 24px);
 	@media screen and (min-width: 700px) {
 		--cd-screen-split: 7.3145%;
-		--cd-fluid-btn-padding-vert: clamp(24px, calc(1.5rem + ((1vw - 10px) * 2.6)), 50px);
-		--cd-fluid-btn-padding-horz: clamp(30px, calc(1.875rem + ((1vw - 10px) * 3.3)), 63px);
+		--cd-nav-arrow-width: clamp(25px, calc(1.5625rem + ((1vw - 7px) * 1.7143)), 49px);
+		--cd-nav-door-width: clamp(13px, calc(0.8125rem + ((1vw - 7px) * 0.9286)), 26px);
+		--cd-nav-door-height: clamp(36px, calc(2.25rem + ((1vw - 7px) * 2.2857)), 68px);
+		--cd-fluid-app-control-gap: clamp(12px, calc(0.75rem + ((1vw - 7px) * 0.9911)), 25.875px);
+		--cd-fluid-btn-padding-vert: clamp(18px, calc(1.125rem + ((1vw - 7px) * 2.2857)), 50px);
+		--cd-fluid-btn-padding-horz: clamp(15px, calc(0.9375rem + ((1vw - 7px) * 3.4286)), 63px);
 		--cd-container-padding: 40px 60px;
 		--cd-fluid-container-padding-vert: clamp(40px, calc(2.5rem + ((1vw - 10px) * 2.2)), 62px);
 		--cd-fluid-container-padding-horz: 60px;
 		--cd-fluid-font-size-h1: clamp(48px, calc(3rem + ((1vw - 10px) * 7.2)), 120px);
-		--cd-fluid-font-size-h2: clamp(40px, calc(2.5rem + ((1vw - 10px) * 2.8)), 68px);
-		--cd-fluid-font-size-h3: clamp(64px, calc(4rem + ((1vw - 10px) * 0.8)), 72px);
+		--cd-fluid-font-size-h2: clamp(32px, calc(2rem + ((1vw - 7px) * 2.5714)), 68px);
+		--cd-fluid-font-size-h2-super: clamp(48px, calc(3rem + ((1vw - 7px) * 2.7143)), 86px);
+		--cd-fluid-font-size-h3: clamp(32px, calc(2rem + ((1vw - 7px) * 2.8571)), 72px);
+		--cd-fluid-font-size-h4: clamp(18px, calc(1.125rem + ((1vw - 7px) * 1.4286)), 38px);
+		--cd-fluid-font-size-p: clamp(15px, calc(0.9375rem + ((1vw - 7px) * 0.9286)), 28px);
+		--cd-fluid-font-size-li:clamp(14px, calc(0.875rem + ((1vw - 7px) * 1)), 28px);
+		--cd-fluid-font-size-p-large: clamp(18px, calc(1.125rem + ((1vw - 7px) * 1.2857)), 36px);
+		--cd-fluid-font-size-p-small:clamp(16px, calc(1rem + ((1vw - 7px) * 0.5714)), 24px);
+		--cd-fluid-font-size-p-xsmall: clamp(12px, calc(0.75rem + ((1vw - 7px) * 0.5714)), 20px);
 		--cd-fluid-font-size-title: clamp(96px, calc(6rem + ((1vw - 10px) * 15.767)), 253.67px);
-		--cd-fluid-font-size-tag: clamp(32px, calc(2rem + ((1vw - 10px) * 2.125)), 53.25px);
-		--cd-fluid-font-size-btn: clamp(22px, calc(1.375rem + ((1vw - 7px) * 1.8571)), 48px);;
+		--cd-fluid-font-size-tag: clamp(20px, calc(1.25rem + ((1vw - 7px) * 2.375)), 53.25px);
+		--cd-fluid-font-size-new-tag: clamp(28px, calc(1.75rem + ((1vw - 7px) * 1.8036)), 53.25px);
+		--cd-fluid-font-size-li-text: clamp(14px, calc(0.875rem + ((1vw - 7px) * 0.8571)), 26px);
+		--cd-fluid-new-tag-padding-vert:clamp(3px, calc(0.1875rem + ((1vw - 7px) * 0.7367)), 13.314px);
+		--cd-fluid-new-tag-padding-horz: clamp(9px, calc(0.5625rem + ((1vw - 7px) * 0.3081)), 13.314px);
+		--cd-fluid-new-tag-padding: var(--cd-fluid-new-tag-padding-vert) var(--cd-fluid-new-tag-padding-horz);
+		--cd-fluid-font-size-btn: clamp(22px, calc(1.375rem + ((1vw - 7px) * 1.8571)), 48px);
 		--cd-fluid-font-size-start-btn: clamp(18px, calc(1.125rem + ((1vw - 7px) * 1.5714)), 40px);
 		--cd-fluid-start-btn-padding-vert: clamp(12px, calc(0.75rem + ((1vw - 7px) * 2.7143)), 50px);
 		--cd-fluid-start-btn-padding-horz: clamp(24px, calc(1.5rem + ((1vw - 7px) * 2.8571)), 64px);
 		--cd-fluid-start-btn-padding: var(--cd-fluid-start-btn-padding-vert) var(--cd-fluid-start-btn-padding-horz);
 		--cd-fluid-logo-width: clamp(138px, calc(8.625rem + ((1vw - 7px) * 33)), 600px);
+		--cd-fluid-nav-gap: clamp(10px, calc(0.625rem + ((1vw - 7px) * 5)), 80px);
+		--cd-fluid-nav-extras-gap: clamp(0px, calc(0rem + ((1vw - 7px) * 4.2857)), 60px);
+		--cd-fluid-padding-footer: clamp(10px, calc(0.625rem + ((1vw - 7px) * 3.5714)), 60px);
+		--cd-fluid-link-arrow-text: clamp(24px, calc(1.5rem + ((1vw - 7px) * 1.9488)), 51.283px);
+		--cd-zoom-icon-width: clamp(50px, calc(3.125rem + ((1vw - 7px) * 6.2873)), 138.022px);
+		--cd-fluid-pulse-width: clamp(120px, calc(7.5rem + ((1vw - 7px) * 12.8571)), 300px);
+		--cd-fluid-text-container-padding-top:clamp(20px, calc(1.25rem + ((1vw - 7px) * 7.1429)), 120px);
+		--cd-fluid-text-container-padding-right:clamp(20px, calc(1.25rem + ((1vw - 7px) * 5.7143)), 100px);
+		--cd-fluid-text-container-padding-bottom:clamp(20px, calc(1.25rem + ((1vw - 7px) * 4.2857)), 80px);
+		--cd-fluid-text-container-padding-left:clamp(20px, calc(1.25rem + ((1vw - 7px) * 5.7143)), 100px);
+		--cd-fluid-text-container-padding: var(--cd-fluid-text-container-padding-top) var(--cd-fluid-text-container-padding-right) var(--cd-fluid-text-container-padding-bottom);
+		--cd-fluid-fl-li-heading-basis: clamp(160px, calc(10rem + ((1vw - 7px) * 20)), 440px);
+		--cd-fluid-screen-container-padding-top: clamp(20px, calc(1.25rem + ((1vw - 7px) * 7.1429)), 120px);
+		--cd-fluid-screen-container-padding-right:clamp(20px, calc(1.25rem + ((1vw - 7px) * 5.7143)), 100px);
+		--cd-fluid-screen-container-padding-bottom: clamp(20px, calc(1.25rem + ((1vw - 7px) * 8.5714)), 140px);
+		--cd-fluid-screen-container-padding-left:clamp(20px, calc(1.25rem + ((1vw - 7px) * 5.7143)), 100px);
+		--cd-fluid-screen-container-padding: var(--cd-fluid-screen-container-padding-top) var(--cd-fluid-screen-container-padding-right) var(--cd-fluid-screen-container-padding-bottom) var(--cd-fluid-screen-container-padding-left);
+		
+		--cd-fluid-btn-tag-padding-vert: clamp(3px, calc(0.1875rem + ((1vw - 7px) * 0.6414)), 11.98px);
+		--cd-fluid-btn-tag-padding-horz: clamp(6px, calc(0.375rem + ((1vw - 7px) * 0.4271)), 11.98px);
+		--cd-fluid-btn-tag-padding: var(--cd-fluid-btn-tag-padding-vert) var(--cd-fluid-btn-tag-padding-horz);
+
+		--cd-fluid-padding-wrap-vert: clamp(30px, calc(1.875rem + ((1vw - 7px) * 7.8571)), 140px);
+		--cd-fluid-padding-wrap-horz: clamp(20px, calc(1.25rem + ((1vw - 7px) * 5.7143)), 100px);
+		--cd-fluid-padding-wrap: var(--cd-fluid-padding-wrap-vert) var(--cd-fluid-padding-wrap-horz);
+		--cd-fluid-font-size-msg-title: clamp(32px, calc(2rem + ((1vw - 7px) * 3.5714)), 82px);;
+		--cd-fluid-font-size-msg-text: clamp(16px, calc(1rem + ((1vw - 7px) * 1.1429)), 32px);
+		--cd-fluid-msg-screen-gap:clamp(12px, calc(0.75rem + ((1vw - 7px) * 2.7143)), 50px);
+		--cd-fluid-svg-icon-width: clamp(90px, calc(5.625rem + ((1vw - 7px) * 4.2857)), 150px);
+		--cd-fluid-font-size-msg-link: clamp(18px, calc(1.125rem + ((1vw - 7px) * 0.4286)), 24px);
+		--cd-fluid-modal-padding: clamp(12px, calc(0.75rem + ((1vw - 7px) * 2.7143)), 50px);
+		--cd-fluid-x-svg-width: clamp(30px, calc(1.875rem + ((1vw - 7px) * 4.2857)), 90px);
+		--cd-fluid-plan-padding-vert: clamp(20px, calc(1.25rem + ((1vw - 7px) * 2.8571)), 60px);
+		--cd-fluid-plan-padding-horz: clamp(20px, calc(1.25rem + ((1vw - 7px) * 5.7143)), 100px);
+		--cd-fluid-plan-padding: var(--cd-fluid-plan-padding-vert) var(--cd-fluid-plan-padding-horz);
+		--cd-fluid-font-size-plus-title: clamp(20px, calc(1.25rem + ((1vw - 7px) * 1.2857)), 38px);
+		--cd-fluid-icon-plus-width:clamp(40px, calc(2.5rem + ((1vw - 7px) * 4.2857)), 100px);
+		--cd-fluid-content-container-padding-vert: clamp(20px, calc(1.25rem + ((1vw - 7px) * 5)), 90px);
+		--cd-fluid-content-container-padding-horz: clamp(30px, calc(1.875rem + ((1vw - 7px) * 4.2857)), 90px);
+		--cd-fluid-content-container-padding: var(--cd-fluid-content-container-padding-vert) var(--cd-fluid-content-container-padding-horz);
+		--cd-fluid-callout-row-padding: clamp(30px, calc(1.875rem + ((1vw - 7px) * 3.5714)), 80px);
+		--cd-fluid-callout-row-gap: clamp(20px, calc(1.25rem + ((1vw - 7px) * 2.8571)), 60px);
+		--cd-fluid-callout-card-gap:clamp(10px, calc(0.625rem + (36 - 10) * ((100vw - 700px) / (2100 - 700))), 36px);
+
 	}
 	@media screen and (min-width: 1024px) {
 

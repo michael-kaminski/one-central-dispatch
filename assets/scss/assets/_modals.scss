@@ -1,15 +1,15 @@
 .modal{ 
 	.btn-close{
 		background: url(../img/icon-plus.svg);
-		width: 111.642px;
-		height: 113.36px;
+		width: 52px;
+		height: 52px;
 		background-size: 100% 100%;
 		background-position: center center;
 		background-repeat: no-repeat;
 		transform: rotate(45deg);
 		position: absolute;
-		top: -61px;
-	    right: -61px;
+		top: -23px;
+    	right: -22px;
 	    z-index: 20;
 	    opacity: 1;
 	    -webkit-transition: all 250ms ease-in-out;
@@ -26,6 +26,17 @@
 			-o-transition: all 250ms ease-in-out;
 			transition: all 250ms ease-in-out;
 		}
+		
+		@media screen and (min-width: 1024px) {
+			width: 80px;
+			height: 80px;
+		}
+		@media screen and (min-width: 2000px) {
+			width: 111.642px;
+			height: 113.36px;
+			top: -61px;
+	    	right: -61px;
+		}
 	}
 	.modal-dialog{
 		max-width: 1717.577px;
@@ -36,7 +47,7 @@
 				position: relative;
 				border-radius: 12.158px;
 				background: #E5EAEB;
-				padding: 50px;
+				padding: var(--cd-fluid-modal-padding);
 				overflow: hidden;
 				.drawer-img{
 					position: absolute;
@@ -48,11 +59,16 @@
 				}
 				.listing-img{
 					position: absolute;
-					bottom: 0;
-					left: 50%;
-					transform: translate(-50%, 0) !important;
-					z-index: 12;
-					max-width: 1300px;
+				    bottom: 0;
+				    left: 50%;
+				    z-index: 12;
+
+				    max-width: 80%;
+    				margin-left: -40%;
+    				@media screen and (min-width: 2000px) {
+					    max-width: 1300px;
+					    margin-left: -650px;
+					}
 				}
 				.map-img{
 					position: absolute;
@@ -60,7 +76,8 @@
 					left: 50%;
 					transform: translate(-50%, -50%) !important;
 					z-index: 12;
-					max-width: 1300px;
+					max-width: 1460px;
+					width: 100%;
 				}
 				.inner-modal-overlay{
 					background-color: rgba(0, 0, 0, 0.5);
@@ -118,6 +135,10 @@
     bottom: 6%;
     right: 18%;
 }
+.hs-manage-listings{
+	top: 360px;
+    right: -24px;
+}
 .scroll-wrap{
 	width: 100%;
 	height: 100%;
@@ -173,15 +194,19 @@ z-index: 40;
     right: 60px;
     max-width: 102px;
 }
-
+.hs-start-btn{
+	position: absolute;
+	bottom: 217px;
+    right: 39px;
+}
 .blind-ratings-modal-1{
 
 }
 
 .blind-ratings-modal-2{
 	position: absolute;
-	bottom: 100px;
-	right: 100px;
+	bottom: 180px;
+    right: 60px;
 	max-width: 620px;
 }
 

@@ -7,7 +7,7 @@ button:focus:not(:focus-visible) {
 	max-width: 872px;
 	width: 100%;
 	height: auto;
-	padding: var(--cd-fluid-btn-padding-horz) var(--cd-fluid-btn-padding-horz);
+	padding: var(--cd-fluid-btn-padding-horz);
 	background-image: url(../img/BTN-NAV-BLANK.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -74,32 +74,41 @@ button:focus:not(:focus-visible) {
 
 	.btn-tag{
 		position: absolute;
-		right: -21.539px;
-		top: -28.657px;
+		right: -1.539px;
+		top: -3.657px;
 		font-size: var(--cd-fluid-font-size-tag);
 		background: var(--cd-color-tangerine);
 		color: var(--cd-color-blacktop);
 		display: flex;
-		padding: 11.98px;
+		padding: var(--cd-fluid-btn-tag-padding);
 		justify-content: center;
 		align-items: center;
 		gap: 2.396px;
 		font-style: normal;
 		font-weight: 700;
 		line-height: 29.649px; /* 61.87% */
-		letter-spacing: -1.917px;
+		letter-spacing: -1px;
 		font-family: var(--cd-font-family-saira);
+
+		@media screen and (min-width: 700px) {
+			right: -8.539px;
+			top: -9.657px;
+		}
+		@media screen and (min-width: 2000px) {
+			right: -21.539px;
+			top: -28.657px;
+			letter-spacing: -1.917px;
+		}
 	}
 }
 
 
 
 .start-btn{
+
 	max-width: 805px;
 	width: auto;
-	@media screen and (min-width: 2000px) {
-		width: 100%;
-	}
+	
 	height: auto;
 	padding: var(--cd-fluid-start-btn-padding);
 	background-image: url(../img/START-BTN-BLANK.png);
@@ -162,7 +171,9 @@ button:focus:not(:focus-visible) {
 		background-image: url(../img/START-BTN-BLANK-HOVER.png);
 		box-shadow: none;
 	}
-
+	@media screen and (min-width: 2000px) {
+		width: 100%;
+	}
 }
 
 .btn{
@@ -192,11 +203,12 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	right: -21.539px;
 	top: -28.657px;
+
 	font-size: var(--cd-fluid-font-size-btn);
 	background: var(--cd-color-tangerine);
 	color: var(--cd-color-blacktop);
 	display: flex;
-	padding: 11.98px;
+	padding: var(--cd-fluid-btn-tag-padding);
 	justify-content: center;
 	align-items: center;
 	gap: 2.396px;
@@ -205,6 +217,14 @@ button:focus:not(:focus-visible) {
 	line-height: 29.649px; /* 61.87% */
 	letter-spacing: -1.917px;
 	font-family: var(--cd-font-family-saira);
+	@media screen and (min-width: 700px) {
+		right: -8.539px;
+		top: -9.657px;
+	}
+	@media screen and (min-width: 2000px) {
+		right: -21.539px;
+		top: -28.657px;
+	}
 }
 
 .btn:hover{
@@ -288,7 +308,7 @@ button:focus:not(:focus-visible) {
 	transform: translate(-50%, -50%);
 	color: var(--cd-color-blacktop);
 	font-family: var(--cd-font-family-saira);
-	font-size: 32px;
+	font-size: var(--cd-fluid-font-size-msg-text);
 	font-style: normal;
 	font-weight: 600;
 	line-height: 140%; /* 44.8px */
