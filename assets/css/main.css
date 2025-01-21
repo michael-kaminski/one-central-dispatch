@@ -925,6 +925,17 @@ nav .btn_container {
   gap: var(--cd-fluid-nav-extras-gap);
 }
 
+.nav_headline {
+  padding-bottom: clamp(30px, 1.875rem + (1vw - 7px) * 8.4286, 148px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: var(--cd-fluid-nav-extras-gap);
+}
+
 .headline {
   font-style: normal;
   font-weight: 700;
