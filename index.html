@@ -32,45 +32,6 @@
 	<meta name="msapplication-wide310x150logo" content="assets/icons/mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="assets/icons/mstile-310x310.png" />
 	<link rel="manifest" href="manifest.json">
-	
-	<!-- 
-
-	This will be used for iPad Versions.
-
-	--------------------------------------------------------------
-
-	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png"> -->
-	<!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico"><![endif]-->
-	<!-- Add to home screen for Android and modern mobile browsers -->
-	<!-- 
-	<meta name="theme-color" content="#4DBA87"> -->
-	<!-- Add to home screen for Safari on iOS -->
-	<!-- <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="central-dispatch-touchscreen-experience">
-	<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon-152x152.png"> -->
-	<!-- Add to home screen for Windows -->
-	<!-- <meta name="msapplication-TileImage" content="/assets/img/icons/msapplication-icon-144x144.png">
-	<meta name="msapplication-TileColor" content="#000000"> -->
-	<!-- Open Graph Meta -->
-	<!-- <meta property="og:locale" content="en_US">
-	<meta property="og:title" content="title goes here">
-	<meta property="og:image" content="link_to_image">
-	<meta property="og:description" content="description goes here">
-	<meta property="og:sitename" content="Sitename"> -->
-	<!-- Twitter Card Meta -->
-	<!-- <meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="title goes here">
-	<meta name="twitter:description" content="description goes here">
-	<meta name="twitter:url" content="site url goes here">
-	<meta name="twitter:image" content="site image goes here"> 
-
-	--------------------------------------------------------------
-
-	-->
-
-
 
 	<!-- CSS : START -->
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -106,13 +67,6 @@
 			<div class="screen_container">
 				<div class="nav_headline"><h3 class="font-saira-semi-condensed color-tangerine font-size-h3 pb-0 mb-0 headline">Explore what’s new.</h3></div>
 				<nav>
-					
-					<!-- <div class="btn_container">
-						<button type="button" id="manheim-listing-integration" class="img-btn">
-							<div id="btn-tag-1" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div>
-							Manheim Listing Integration
-						</button>
-					</div> -->
 					<div class="btn_container">
 						<button type="button" id="about-the-marketplace" class="img-btn">
 							Listing Experience
@@ -120,19 +74,16 @@
 					</div>
 					<div class="btn_container">
 						<button type="button" id="tailored-plans" class="img-btn">
-							<!-- <div id="btn-tag-2" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div> -->
 							Tailored Plans
 						</button>
 					</div>
 					<div class="btn_container">
 						<button type="button" id="market-intelligence" class="img-btn">
-							<!-- <div id="btn-tag-3" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div> -->
 							Market Intelligence
 						</button>
 					</div>
 					<div class="btn_container">
 						<button type="button" id="carrier-app" class="img-btn">
-							<!-- <div id="btn-tag-4" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div> -->
 							Carrier App – Shipper Benefits
 						</button>
 					</div>
@@ -143,18 +94,17 @@
 					</div>
 					<div class="btn_container">
 						<button type="button" id="marketplace-apis" class="img-btn">
-							<!-- <div id="btn-tag-5" class="btn-tag animate__animated animate__bounceIn animate__delay-1s">NEW</div> -->
 							Marketplace APIs
 						</button>
 					</div>
 				</nav>
-				<div class="nav_extras">
+				<!-- <div class="nav_extras">
 					<h3 class="font-saira-semi-condensed color-tangerine font-size-h3 pb-0 headline">We’re just getting started.</h3>
 					<a href="" class="link-arrow color-white font-roboto" id="see-whats-coming">
 						<span>See what&rsquo;s coming</span>
 						<img src="assets/img/nav-arrow.svg" class="nav-arrow" />
 					</a>
-				</div>
+				</div> -->
 			</div>
 		</section>
 		<!-- Menu Screen : END -->
@@ -389,7 +339,7 @@
 												<div class="icon-zoom"></div>
 												<lottie-player class="lottie-player" src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
 											</div>
-											<img src="assets/img/carrier-app-3.png"/>
+											<img src="assets/img/feature-carrier-app-EBOL.png"/>
 										</a>
 									</div>
 									<div class="callout_text">
@@ -1038,7 +988,10 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				<div class="modal-body">
 					<div class="modal-wrap">
-						<img id="" class="w-100" src="assets/img/fpo-img.png"/>
+						<img id="ebol-dropdown" class="" src="assets/img/modal-ebol--more-actions-dropdown.png"/>
+						<img id="ebol-actions-active" class="" src="assets/img/modal-ebol-btn-more-actions-active.png"/>
+						<img id="ebol-actions" class="" src="assets/img/modal-ebol-btn-more-actions.png"/>
+						<img id="ebol-bg" class="w-100" src="assets/img/modal-ebol-background.png"/>
 					</div>
 				</div>
 			</div>
@@ -1049,9 +1002,9 @@
 			<div class="modal-content">
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				<div class="modal-body">
-					<div class="hotspot hs-2">
+					<!-- <div class="hotspot hs-2">
 						<lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="normal" loop autoplay></lottie-player>
-					</div>
+					</div> -->
 					<img id="" class="w-100" src="assets/img/checklist.png"/>
 				</div>
 			</div>

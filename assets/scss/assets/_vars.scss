@@ -134,7 +134,7 @@
 		--cd-fluid-callout-row-padding: clamp(30px, calc(1.875rem + ((1vw - 7px) * 3.5714)), 80px);
 		--cd-fluid-callout-row-gap: clamp(20px, calc(1.25rem + ((1vw - 7px) * 2.8571)), 60px);
 		--cd-fluid-callout-card-gap:clamp(10px, calc(0.625rem + (36 - 10) * ((100vw - 700px) / (2100 - 700))), 36px);
-
+		--cd-fluid-hotspot-size: clamp(50px, calc(3.125rem + (150 - 50) * ((100vw - 768px) / (2100 - 768))), 150px);
 	}
 	@media screen and (min-width: 1024px) {
 

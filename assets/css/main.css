@@ -129,6 +129,7 @@
     --cd-fluid-callout-row-padding: clamp(30px, calc(1.875rem + ((1vw - 7px) * 3.5714)), 80px);
     --cd-fluid-callout-row-gap: clamp(20px, calc(1.25rem + ((1vw - 7px) * 2.8571)), 60px);
     --cd-fluid-callout-card-gap:clamp(10px, calc(0.625rem + (36 - 10) * ((100vw - 700px) / (2100 - 700))), 36px);
+    --cd-fluid-hotspot-size: clamp(50px, calc(3.125rem + (150 - 50) * ((100vw - 768px) / (2100 - 768))), 150px);
   }
 }
 @media screen and (min-width: 2000px) {
@@ -2014,19 +2015,20 @@ footer .footer_column.app_control.menu_container #footer-menu:hover .footer-menu
 
 .hotspot {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: var(--cd-fluid-hotspot-size);
+  height: auto;
+  aspect-ratio: 1/1;
   pointer-events: none;
 }
 
 .pc-hs-1 {
-  right: 40px;
-  top: 110px;
+  right: 12%;
+  top: 10%;
 }
 
 .hs-1 {
-  right: 60px;
-  top: 450px;
+  right: 9%;
+  top: 29%;
 }
 
 .hs-2 {
@@ -2051,7 +2053,7 @@ footer .footer_column.app_control.menu_container #footer-menu:hover .footer-menu
 }
 
 .hs-6 {
-  bottom: 6%;
+  bottom: 8%;
   right: 18%;
 }
 
@@ -2120,22 +2122,22 @@ footer .footer_column.app_control.menu_container #footer-menu:hover .footer-menu
 .phone-start-button {
   position: absolute;
   z-index: 20;
-  bottom: 200px;
-  right: 60px;
+  bottom: 13%;
+  right: 8%;
   max-width: 102px;
 }
 
 .hs-start-btn {
   position: absolute;
-  bottom: 217px;
-  right: 39px;
+  bottom: 14%;
+  right: 5%;
 }
 
 .blind-ratings-modal-2 {
   position: absolute;
-  bottom: 180px;
-  right: 60px;
-  max-width: 620px;
+  bottom: 13%;
+  right: 3.5%;
+  max-width: 42%;
 }
 
 div#preload {
