@@ -103,18 +103,18 @@
 .hotspot{
 	position: absolute;
 	width: var(--cd-fluid-hotspot-size);
-	height: auto;
+	height:var(--cd-fluid-hotspot-size);
 	aspect-ratio: 1/1;
 	pointer-events: none;
 }
 .pc-hs-1{
-	right: 12%;
+	right: 2%;
 	top: 10%;
 }
 .hs-1{
 	// right: 60px;
 	// top: 450px;
-	right: 9%;
+	right: 3%;
     top: 29%;
 }
 .hs-2{
@@ -137,6 +137,10 @@
 .hs-6 {
     bottom: 8%;
     right: 18%;
+}
+.hs-7 {
+	right: 3%;
+    top: 42%;
 }
 .hs-manage-listings{
 	top: 360px;
@@ -212,14 +216,31 @@ z-index: 40;
     right: 3.5%;
     max-width: 42%;
 }
+.hs-ebol-1{
+	top: 23.5%;
+    right: 26%;
+}
+#ebol-bg{
 
+}
+#ebol-actions{
+	max-width: 200px;
+	top: 26.0125%;
+    right: 25.51%;
+}
+#ebol-actions-active{
+	max-width: 200px;
+	top: 26.0125%;
+    right: 25.51%;
+}
+#ebol-dropdown{
+	max-width: 400px;
+    right: 26%;
+    top: 13.597%;
+}
+#ebol-page{
 
-
-
-
-
-
-
+}
 
 
 

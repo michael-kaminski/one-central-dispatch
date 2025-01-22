@@ -8,12 +8,9 @@ $(window).on('load', function(){
 });
 
 function removeLoader(){
-	//Hide and remove loading screen
     $( "#loading-screen" ).fadeOut(500, function() {
-      	// fadeOut complete. Remove the loading div
       	$( "#loading-screen" ).remove(); 
   	});
-  	//hide the image loader, then remove
   	$( "#image-loader" ).fadeOut(500, function() {
       $( "#image-loader" ).remove(); //leave for now
   	});
@@ -136,6 +133,26 @@ function checkWindow() {
   // }
 
 }
+// let isIOS = /iPad/iPhone/iPod/.test(navigator.userAgent);
+
+// if (isIOS){
+// 	var CanvasVideoPlayer: any;
+
+// 	new CanvasVideoPlayer({
+// 		videoSelector: '.video_bg',
+// 		canvasSelector: '',
+// 		timelineSelector: false,
+// 		autoplay: true,
+// 		makeLoop: true,
+// 		pauseOnClick: false,
+// 		audio: false
+// 	})
+// } else {
+// 	document.querySelectorAll('.canvas')[0].setAttribute('style', 'display: none;');
+// }
+
+
+
 
  //Video
 let vid = document.getElementById("video_bg");
@@ -179,7 +196,7 @@ $( document ).ready(function() {
     console.log( "ready!" );
     checkWindow();
 
-
+    var modalHtml = '<div class="modal fade" id="mannListingIntModal" tabindex="-1" aria-labelledby="mannListingIntModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="modal-wrap"><img id="" style="" class="listing-img modal-asset d-none animate__animated" src="assets/img/mann-listing-int-modal-2.png"><div id="inner-modal-overlay" style="display:none" class="inner-modal-overlay listing-overlay modal-asset"></div><div class="hotspot hs-5"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="" class="w-100 listing-trigger" src="assets/img/mann-listing-int-modal-1.png"></div></div></div></div></div><div class="modal fade" id="createListingIntModal" tabindex="-1" aria-labelledby="createListingIntModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="modal-wrap scrollable-wrap"><img id="" class="modal-asset w-100 sticky-top" src="assets/img/create-listing-top-nav.png"> <img id="" class="w-100" src="assets/img/create-listing-page.png"></div></div></div></div></div><div class="modal fade" id="manageListingsModal" tabindex="-1" aria-labelledby="createListingIntModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><a href="#" class="toggle-me pos-relative"><img id="" class="w-100 z-60 pos-absolute pos-top-left h-100 transition top-img" src="assets/img/manage-listings-page-2.png" style="display:none"><div class="hotspot z-50 hs-manage-listings"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="" class="w-100 z-40 pos-top-left h-100" src="assets/img/manage-listings-page-1.png"></a></div></div></div></div><div class="modal fade" id="manageDispatchesModal" tabindex="-1" aria-labelledby="realTimeTrkModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="modal-wrap"><img id="" class="map-img max-844 modal-asset d-none animate__animated" src="assets/img/manage-dispatches-modal.png"><div id="inner-modal-overlay" style="display:none" class="inner-modal-overlay map-overlay modal-asset"></div><div class="hotspot hs-7"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="map-trigger" class="w-100 map-trigger" src="assets/img/manage-dispatches-page.png"></div></div></div></div></div><div class="modal fade" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><img id="" class="w-100" src="assets/img/dashboard-admin-panel.png"></div></div></div></div><div class="modal fade" id="blindRatingsModal" tabindex="-1" aria-labelledby="blindRatingsModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><a href="#" class="img-toggle pos-relative"><div class="hotspot hs-6 z-60"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="" class="transition blind-ratings-modal-2 z-50" src="assets/img/blind-ratings-modal-2.png" style="display:none"> <img id="" class="blind-ratings-modal-1 w-100 h-auto z-40" src="assets/img/blind-ratings-page-v2.png" style=""></a></div></div></div></div><div class="modal fade" id="usermgmtModal" tabindex="-1" aria-labelledby="usermgmtModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="modal-wrap"><img id="drawer-img" class="drawer-img modal-asset d-none animate__animated" src="assets/img/add-user.png"><div id="inner-modal-overlay" style="display:none" class="inner-modal-overlay drawer-overlay modal-asset"></div><div class="hotspot pc-hs-1"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="drawer-trigger" class="w-100 drawer-trigger" src="assets/img/user-management-compressed.png"></div></div></div></div></div><div class="modal fade" id="realTimeTrkModal" tabindex="-1" aria-labelledby="realTimeTrkModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="modal-wrap"><img id="map-img" class="d-none map-img modal-asset animate__animated" style="" src="assets/img/real-time-tracking-map.png"><div id="inner-modal-overlay" style="display:none" class="inner-modal-overlay map-overlay modal-asset"></div><div class="hotspot hs-1"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="map-trigger" class="w-100 map-trigger" src="assets/img/real-time-tracking-dispatches.png"></div></div></div></div></div><div class="modal fade" id="appInspectionModal" tabindex="-1" aria-labelledby="appInspectionModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="modal-wrap"><div class="phone-wrap"><div class="phone-screen"><img id="" class="phone-start-button modal-asset animate__animated z-70" src="assets/img/vehicle-inspections-phone-1-start-button.png"><div class="hotspot hs-start-btn z-100"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="" class="phone-img z-60 phone-img-1 modal-asset animate__animated" src="assets/img/vehicle-inspections-phone-1.png"><div class="hotspot hs-4 op-0"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="" class="phone-img z-50 phone-img-2 modal-asset animate__animated" src="assets/img/vehicle-inspections-phone-2.png"> <img id="" class="phone-img z-40 phone-img-3 modal-asset" src="assets/img/vehicle-inspections-phone-3.png"></div></div></div></div></div></div></div><div class="modal fade" id="ebolModal" tabindex="-1" aria-labelledby="ebolModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="modal-wrap"><img id="ebol-page" class="w-100 z-90 pos-absolute" style="display:none" src="assets/img/modal-ebol-page.png"> <img id="ebol-dropdown" class="z-80 pos-absolute" style="display:none" src="assets/img/modal-ebol-more-actions-dropdown.png"><div class="hotspot hs-ebol-1 z-70"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="ebol-actions-active" class="z-60 pos-absolute op-0" style="" src="assets/img/modal-ebol-btn-more-actions-active.png"> <img id="ebol-actions" class="z-50 pos-absolute" src="assets/img/modal-ebol-btn-more-actions.png"> <img id="ebol-bg" class="w-100 z-40" src="assets/img/modal-ebol-background.png"></div></div></div></div></div><div class="modal fade" id="carrierVerificationModal" tabindex="-1" aria-labelledby="carrierVerificationModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><img id="" class="w-100" src="assets/img/checklist.png"></div></div></div></div><div class="modal fade" id="marketIntelligenceModal" tabindex="-1" aria-labelledby="marketIntelligenceModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><div class="scroll-wrap"><img id="" class="w-100" src="assets/img/modal-market-intelligence.png"></div></div></div></div></div><div class="modal fade" id="priceCheckModal" tabindex="-1" aria-labelledby="priceCheckModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><a href="#" class="img-toggle pos-relative"><div class="hotspot hs-3 z-60"><lottie-player src="assets/img/Yellow_Radial_Wave.json" background="transparent" speed="1" style="width:150px;height:150px" direction="1" mode="normal" loop autoplay></lottie-player></div><img id="pc-plus-img" class="transition top-img w-100 h-auto pos-absolute pos-top-left z-50" src="assets/img/price-check.png"> <img id="pc-img" class="bottom-img w-100 h-auto z-40" src="assets/img/price-check-plus.png" style=""></a></div></div></div></div>';
 	var timer = '';
 	var delay = 600000;
 	//uncomment to test
@@ -297,6 +314,8 @@ $( document ).ready(function() {
 		$( '.x-btn' ).each(function(index) {
 	    	$(this).toggleClass('op-0');
 		});
+
+		//$('#modal_container').html(modalHtml);
 	});
 	$('.modal').on('show.bs.modal', function (e) {
 		$( '.x-btn' ).each(function(index) {
@@ -322,6 +341,9 @@ $( document ).ready(function() {
 		$('.dark-overlay').fadeIn();
 		$('#menu-screen').fadeIn();
 		$('#footer-exit').fadeIn();
+
+		// $('#video-bg')[0].play(); 
+		// $('#video-bg').removeClass('blur');
 	});
 	//Menu Clicks
 	$('#manheim-listing-integration').click(function() {
@@ -553,6 +575,7 @@ $( document ).ready(function() {
 	$( '.img-toggle' ).each(function(index) {
 	    $(this).on('click', function(e){
 	    	e.preventDefault();
+	    	console.log( ".img-toggle clicked!" );
 	    	var parentContext = $(this).parents('.modal-body');
 	        $( '.top-img',parentContext).toggleClass( "op-0" );
 	        $( '.hotspot',parentContext).toggleClass( "op-0" );
@@ -615,6 +638,38 @@ $( document ).ready(function() {
 		 	},200);
 	    });
 	});
+
+
+	$( '#ebol-actions, #ebol-actions-active' ).each(function(index) {
+	    $(this).on('click', function(e){
+	    	e.preventDefault();
+	    	var parentContext = $(this).parents('.modal-body');
+	        $( '#ebol-dropdown',parentContext ).fadeIn();
+	        $( '.hs-ebol-1',parentContext ).fadeOut();
+	    });
+	});
+	$('#ebol-actions-active').hover (function(){
+		$(this).toggleClass('op-0');
+	});
+	$( '#ebol-dropdown' ).each(function(index) {
+	    $(this).on('click', function(e){
+	    	e.preventDefault();
+	    	var parentContext = $(this).parents('.modal-body');
+	        $( '#ebol-dropdown',parentContext ).fadeOut();
+	        $( '#ebol-actions',parentContext ).fadeOut();
+	        $( '#ebol-page',parentContext ).fadeIn();
+	    });
+	});
+	$( '#ebol-page' ).each(function(index) {
+	    $(this).on('click', function(e){
+	    	e.preventDefault();
+	    	var parentContext = $(this).parents('.modal-body');
+	        $( '#ebol-page',parentContext ).fadeOut();
+	        $( '#ebol-actions',parentContext ).fadeIn();
+	        $( '.hs-ebol-1',parentContext ).fadeIn();
+	    });
+	});
+
 
 
 	$('.menu_container #footer-menu').hover (function(){

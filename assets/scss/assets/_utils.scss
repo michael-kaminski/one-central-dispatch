@@ -251,6 +251,7 @@ div#preload {
 	height: 100%;
 	z-index: 3;
 	background: url(../img/cd-nada-touchscreen-background.jpg);
+	background-size: 100% 100%;
 }
 .video_bg{
 	position: absolute;
@@ -349,6 +350,12 @@ div#preload {
 }
 .z-100{
 	z-index: 100;
+}
+.z-90{
+	z-index: 90;
+}
+.z-80{
+	z-index: 80;
 }
 .z-70{
 	z-index: 70;
@@ -564,3 +571,43 @@ div#preload {
    -webkit-animation-name: heartbeatIn;
    animation-name: heartbeatIn;
 }
+
+
+.anim__delay_01{
+  animation-delay: 0.25s;
+}
+.anim__delay_02{
+  animation-delay: 0.5s;
+}
+.anim__delay_03{
+  animation-delay: 0.75s;
+}
+.anim__delay_04{
+  animation-delay: 1s;
+}
+.anim__delay_05{
+  animation-delay: 1.25s;
+}
+.anim__delay_06{
+  animation-delay: 1.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
